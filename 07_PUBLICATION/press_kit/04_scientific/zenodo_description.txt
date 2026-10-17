@@ -1,0 +1,4 @@
+Title: ALPHA-20: A Multimodal, Executable, and Cryptographic Language for Human-AI Collaboration
+
+Description:
+Alpha-20 is a novel formal language built on 20 universal semantic primitives (L0-L4). It bridges human cognition and machine verification by integrating deterministic SVG visual rendering, Web Audio API sonification, and cryptographic provenance (SHA-256 + OpenTimestamps). The archive includes a Python compiler, a WebAssembly runtime, an interactive node-based playground, and a comprehensive whitepaper. The project introduces the Multimodal Coherence Formula (FCM-20) to quantify the integrity of artifacts across physical, biological, and computational domains. Created through human-AI collaboration, it is released under a dual license (CC BY-SA 4.0 / AGPL-3.0).

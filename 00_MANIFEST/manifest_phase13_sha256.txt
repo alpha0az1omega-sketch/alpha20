@@ -1,0 +1,3 @@
+6d15aef9a9d0c5183cadfa5aed427abbcd3ca220f2ced4af9442d0dbf1b62ea2  07_PUBLICATION/website/src/pages/verify.astro
+5ebc891366f2d333f665c98f64b4774172d7c4ac3f3336c532c199c4ba817ef0  verify_all.sh
+0e0ad0adc4c218d8f0aece8bb8ae03c6946fc5913a6feb2a989d23f7ccd8cb88  07_PUBLICATION/RELEASE_CHECKLIST.md

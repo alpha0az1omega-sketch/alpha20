@@ -1,0 +1,21 @@
+cff-version: 1.2.0
+title: "ALPHA_ARCHIVE_000 — Universal Executable Language (working name)"
+message: "If you reference this work, please cite as below."
+type: software
+authors:
+  - alias: "Alpha0az1omega"
+    affiliation: "Independent research"
+version: "0.1.0"
+date-released: "2026-10-17"
+license: "CC-BY-4.0"
+abstract: >-
+  A formal, executable, symbolically traceable language based on 20 universal
+  semantic primitives (Alpha-20), designed to be written, read, and executed
+  by humans, AI agents, and software across scientific disciplines.
+  Every artifact is sealed with SHA-256, GPG signature, and OpenTimestamps.
+keywords:
+  - universal language
+  - executable specification
+  - semantic primitives
+  - cryptographic provenance
+  - OpenTimestamps

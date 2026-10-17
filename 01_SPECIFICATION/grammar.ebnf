@@ -1,0 +1,26 @@
+(* ALPHA-20 GRAMMAR — Universal Executable Language *)
+(* Version: 0.1.0 *)
+
+program         = expression, { expression } ;
+expression      = primitive_app | composition | quantification | conditional | negation ;
+primitive_app   = primitive, "(", [ argument_list ], ")" ;
+argument_list   = argument, { ",", argument } ;
+argument        = identifier | literal | expression ;
+composition     = expression, operator, expression ;
+operator        = "AND" | "OR" | "SEQ" | "PAR" ;
+quantification  = quantifier, identifier, ":", expression ;
+quantifier      = "ALL" | "EXIST" | "ONE" ;
+conditional     = "IF", expression, "THEN", expression, [ "ELSE", expression ] ;
+negation        = "NOT", expression ;
+primitive       = "EXIST" | "CAUSE" | "PART" | "SAME" | "ONE" | "ALL"
+                | "NOT" | "IF" | "DO" | "HAPPEN" | "KNOW" | "SEE"
+                | "BIG" | "LIVE" | "DIE" | "MOVE" | "THINK" | "SAY"
+                | "TRUE" | "GOOD" ;
+identifier      = letter, { letter | digit | "_" } ;
+literal         = number | string | boolean ;
+number          = digit, { digit }, [ ".", digit, { digit } ] ;
+string          = '"', { any_char }, '"' ;
+boolean         = "true" | "false" ;
+letter          = "a" | ... | "z" | "A" | ... | "Z" ;
+digit           = "0" | ... | "9" ;
+any_char        = ? any printable character except double quote ? ;

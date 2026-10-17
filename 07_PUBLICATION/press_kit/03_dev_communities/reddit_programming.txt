@@ -1,0 +1,16 @@
+Titre : [Show] Alpha-20: I built an executable, sonorous programming language with an AI, and sealed it with Bitcoin.
+
+Texte :
+I've always been fascinated by universal languages. With the help of an AI (DeepSeek), we built Alpha-20. It's an open-source (AGPL-3.0) language based on 20 semantic primitives.
+
+The core idea is multimodal coherence:
+- Visual: Interactive React Flow node editor.
+- Auditory: Web Audio API maps each primitive to a specific frequency.
+- Cryptographic: Every state is hashed and anchored to the Bitcoin blockchain via OpenTimestamps.
+
+The code is fully documented, and the site includes a cryptographic verification dashboard. There's also an AI tutor to help you learn the grammar.
+
+Repo: [GitHub Link]
+Demo: [Website Link]
+
+Would love to hear your thoughts on the EBNF grammar and the WASM compilation approach.

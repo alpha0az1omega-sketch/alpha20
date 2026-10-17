@@ -1,0 +1,2 @@
+4733e49bc6e25e0c0bd4ebb12bb9c0c1f3cc1100440a5a1b3fdd8118ba0f949f  VERIFY.md
+8fda755a710c19c47bf5bb6b478c42c41143dff43aaa6e9e73488a8ecd8400b8  07_PUBLICATION/github/push_instructions.md

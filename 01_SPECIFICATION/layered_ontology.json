@@ -1,0 +1,10 @@
+{
+  "version": "0.1.0",
+  "layers": {
+    "L0": { "name": "Formal_Logic_and_Mathematics",     "primitives": ["EXIST","SAME","ONE","ALL","NOT","IF","TRUE"] },
+    "L1": { "name": "Physical_Causality_and_Magnitude", "primitives": ["CAUSE","PART","BIG"] },
+    "L2": { "name": "Event_and_Action",                 "primitives": ["DO","HAPPEN","MOVE"] },
+    "L3": { "name": "Cognition_and_Communication",      "primitives": ["KNOW","SEE","THINK","SAY"] },
+    "L4": { "name": "Life_and_Value",                   "primitives": ["LIVE","DIE","GOOD"] }
+  }
+}

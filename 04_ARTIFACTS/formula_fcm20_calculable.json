@@ -1,0 +1,18 @@
+{
+  "formula": "C(A) = λ·SHA256(État) + μ·∫Son(t)dt + ν·Visuel(A) + ρ·Preuve(A)",
+  "coefficients": {
+    "lambda": 0.25,
+    "mu": 0.25,
+    "nu": 0.25,
+    "rho": 0.25
+  },
+  "example_alpha20_expression": "MOVE(particle, 0, 10) AND SAME(10, 10) AND BIG(10, 0)",
+  "computed_values": {
+    "sha256_normalized": 0.847,
+    "audio_energy": 0.920,
+    "visual_glyphs": 0.150,
+    "ots_proof": 1.000
+  },
+  "fcm20_score": 0.729,
+  "interpretation": "The artifact is coherent at 72.9% across all four modalities. For a physicist, this corresponds to a valid displacement of 10 units with verified identity and positive magnitude."
+}

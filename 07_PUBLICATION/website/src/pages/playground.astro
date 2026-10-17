@@ -1,0 +1,23 @@
+---
+import Layout from '../layouts/Layout.astro';
+import TutorSidebar from '../components/TutorSidebar';
+import AlphaGraph from '../components/AlphaGraph';
+---
+<Layout title="Playground">
+  <h1>Cognitive Playground</h1>
+  <p style="margin-bottom: 20px;">Cliquez sur une primitive pour l'ajouter au plateau. Reliez-les avec des fils. Demandez de l'aide à l'IA à droite.</p>
+
+  <div style="display: flex; gap: 20px; align-items: flex-start;">
+    
+    <!-- Zone de gauche : L'éditeur visuel React Flow -->
+    <div style="flex: 2;">
+      <AlphaGraph client:only="react" />
+    </div>
+
+    <!-- Zone de droite : Le Tuteur IA -->
+    <div style="flex: 1;">
+      <TutorSidebar client:only="react" />
+    </div>
+    
+  </div>
+</Layout>

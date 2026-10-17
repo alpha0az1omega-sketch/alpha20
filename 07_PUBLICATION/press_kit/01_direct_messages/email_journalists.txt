@@ -1,0 +1,16 @@
+Objet : Alpha-20 : Le premier langage exécutable, sonore et vérifiable (créé par un humain et une IA)
+
+Bonjour [Nom],
+
+Je vous contacte car je viens de publier Alpha-20, un projet open-source qui repousse les limites de l'interaction humain-machine.
+
+Au lieu d'écrire du code, l'utilisateur assemble des glyphes visuels, les entend (Web Audio API), et le système génère une preuve cryptographique (SHA-256 + Bitcoin) de chaque état. C'est un langage universel basé sur 20 primitives sémantiques (L0-L4), compilable en Python et WASM.
+
+Le projet est entièrement documenté, scellé cryptographiquement, et le site web inclut un "Playground" cognitif avec un tuteur IA.
+
+Si vous souhaitez explorer l'artefact ou discuter de la collaboration humain-IA qui a mené à sa création, je suis disponible.
+
+Bien à vous,
+Alpha0az1omega
+Lien : alpha0az1omega.com
+Preuves : [Lien vers le manifeste OTS]

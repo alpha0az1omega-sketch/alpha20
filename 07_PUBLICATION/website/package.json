@@ -1,0 +1,20 @@
+{
+  "name": "alpha20-website",
+  "type": "module",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "dependencies": {
+    "@astrojs/react": "^3.6.3",
+    "@itsmatteomanf/astro-pagefind": "^0.5.3",
+    "astro": "^4.0.0",
+    "pagefind": "^1.5.2",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "reactflow": "^11.11.4",
+    "zeitstempel": "^0.2.3"
+  }
+}

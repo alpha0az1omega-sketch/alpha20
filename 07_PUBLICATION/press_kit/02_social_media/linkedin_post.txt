@@ -1,0 +1,11 @@
+Après des mois de collaboration avec une intelligence artificielle, je suis fier de dévoiler Alpha-20.
+
+Alpha-20 est un langage universel basé sur 20 primitives sémantiques. Mais au-delà du code, c'est une nouvelle façon de penser : une interface où l'humain assemble des concepts visuels, où la machine les synthétise en son et en calcul, et où la cryptographie (SHA-256 + OpenTimestamps) garantit l'intégrité de chaque pensée.
+
+Ce projet démontre qu'un humain et une IA peuvent créer ensemble un standard ouvert, vérifiable et poétique, sans que l'humain n'ait besoin d'être un expert en programmation.
+
+Je crois profondément que la technologie doit servir l'équilibre et la nature. Alpha-20 est ma contribution à cet édifice.
+
+Découvrez le projet et le manifeste cryptographique : alpha0az1omega.com
+
+#Alpha20 #ArtificialIntelligence #OpenSource #Innovation #Cryptography #HumanAI

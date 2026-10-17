@@ -1,0 +1,13 @@
+---
+// Pagefind search modal. Index is generated at build time.
+---
+<link href="/pagefind/pagefind-ui.css" rel="stylesheet" />
+<script src="/pagefind/pagefind-ui.js" type="module"></script>
+
+<div id="search"></div>
+<script>
+  window.addEventListener('DOMContentLoaded', () => {
+    // @ts-ignore
+    new PagefindUI({ element: "#search", showSubResults: true });
+  });
+</script>

@@ -1,0 +1,9 @@
+{
+  "contract_id": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
+  "proposer": "alpha0az1omega",
+  "expression": "MOVE(particle, 0, 10) AND SAME(10, 10)",
+  "sha256": "PLACEHOLDER",
+  "signature": "PLACEHOLDER",
+  "timestamp": "2026-10-17T14:30:00Z",
+  "ots_proof": "PLACEHOLDER"
+}

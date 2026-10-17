@@ -1,0 +1,25 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+<Layout title="Verify">
+  <h1>Cryptographic Verification</h1>
+  <p>Alpha-20 is an open standard. You do not need to trust the author; you can verify the provenance of every artifact cryptographically.</p>
+
+  <h2>1. SHA-256 Hashes</h2>
+  <p>Every file in the archive is hashed. You can recompute the hashes and compare them to the signed manifests.</p>
+  <pre>shasum -a 256 -c 00_MANIFEST/manifest_phase12_sha256.txt</pre>
+
+  <h2>2. GPG Signatures</h2>
+  <p>The manifests are signed by the author's private key. Import the public key and verify the signatures.</p>
+  <pre>gpg --import alpha0az1omega_pubkey.asc
+gpg --verify 00_MANIFEST/manifest_phase12_sha256.txt.asc 00_MANIFEST/manifest_phase12_sha256.txt</pre>
+
+  <h2>3. OpenTimestamps Proofs</h2>
+  <p>Every manifest is anchored to the Bitcoin blockchain using OpenTimestamps. This proves the archive existed at a specific point in time.</p>
+  <pre>ots verify 00_MANIFEST/manifest_phase12_sha256.txt.ots</pre>
+
+  <h2>Public Key Details</h2>
+  <p>Fingerprint: <code>1486F115A1BE731FA18414579BA07862D3FB303D</code></p>
+  <p>UID: <code>ARGUS Audit &lt;argus@local&gt;</code> (Project alias: Alpha0az1omega)</p>
+  <p><a href="/alpha0az1omega_pubkey.asc">Download Public Key</a></p>
+</Layout>

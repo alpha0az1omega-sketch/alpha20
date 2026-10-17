@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Alpha20AgentContract",
+  "type": "object",
+  "required": ["contract_id", "proposer", "expression", "sha256", "signature", "timestamp"],
+  "properties": {
+    "contract_id": { "type": "string", "format": "uuid" },
+    "proposer": { "type": "string", "description": "Agent public key or DID" },
+    "expression": { "type": "string", "description": "Alpha-20 expression" },
+    "sha256": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+    "signature": { "type": "string", "description": "GPG detached signature (armored)" },
+    "timestamp": { "type": "string", "format": "date-time" },
+    "ots_proof": { "type": "string", "description": "Base64-encoded .ots file" }
+  }
+}

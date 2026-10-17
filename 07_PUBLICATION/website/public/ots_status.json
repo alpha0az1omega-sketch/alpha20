@@ -1,0 +1,110 @@
+{
+  "manifest_phase10_sha256.txt.asc.ots": {
+    "status": "timeout",
+    "detail": "Network timeout checking OTS"
+  },
+  "manifest_phase10_sha256.txt.ots": {
+    "status": "timeout",
+    "detail": "Network timeout checking OTS"
+  },
+  "manifest_phase11_sha256.txt.asc.ots": {
+    "status": "timeout",
+    "detail": "Network timeout checking OTS"
+  },
+  "manifest_phase11_sha256.txt.ots": {
+    "status": "timeout",
+    "detail": "Network timeout checking OTS"
+  },
+  "manifest_phase12_sha256.txt.asc.ots": {
+    "status": "timeout",
+    "detail": "Network timeout checking OTS"
+  },
+  "manifest_phase12_sha256.txt.ots": {
+    "status": "timeout",
+    "detail": "Network timeout checking OTS"
+  },
+  "manifest_phase13_sha256.txt.asc.ots": {
+    "status": "timeout",
+    "detail": "Network timeout checking OTS"
+  },
+  "manifest_phase13_sha256.txt.ots": {
+    "status": "timeout",
+    "detail": "Network timeout checking OTS"
+  },
+  "manifest_phase14_sha256.txt.asc.ots": {
+    "status": "timeout",
+    "detail": "Network timeout checking OTS"
+  },
+  "manifest_phase14_sha256.txt.ots": {
+    "status": "timeout",
+    "detail": "Network timeout checking OTS"
+  },
+  "manifest_phase3_sha256.txt.asc.ots": {
+    "status": "unknown",
+    "detail": ""
+  },
+  "manifest_phase3_sha256.txt.ots": {
+    "status": "unknown",
+    "detail": ""
+  },
+  "manifest_phase4_sha256.txt.asc.ots": {
+    "status": "unknown",
+    "detail": ""
+  },
+  "manifest_phase4_sha256.txt.ots": {
+    "status": "unknown",
+    "detail": ""
+  },
+  "manifest_phase5_sha256.txt.asc.ots": {
+    "status": "unknown",
+    "detail": ""
+  },
+  "manifest_phase5_sha256.txt.ots": {
+    "status": "unknown",
+    "detail": ""
+  },
+  "manifest_phase6_sha256.txt.asc.ots": {
+    "status": "unknown",
+    "detail": ""
+  },
+  "manifest_phase6_sha256.txt.ots": {
+    "status": "unknown",
+    "detail": ""
+  },
+  "manifest_phase7_sha256.txt.asc.ots": {
+    "status": "timeout",
+    "detail": "Network timeout checking OTS"
+  },
+  "manifest_phase7_sha256.txt.ots": {
+    "status": "timeout",
+    "detail": "Network timeout checking OTS"
+  },
+  "manifest_phase8_sha256.txt.asc.ots": {
+    "status": "timeout",
+    "detail": "Network timeout checking OTS"
+  },
+  "manifest_phase8_sha256.txt.ots": {
+    "status": "timeout",
+    "detail": "Network timeout checking OTS"
+  },
+  "manifest_phase9_sha256.txt.asc.ots": {
+    "status": "timeout",
+    "detail": "Network timeout checking OTS"
+  },
+  "manifest_phase9_sha256.txt.ots": {
+    "status": "timeout",
+    "detail": "Network timeout checking OTS"
+  },
+  "manifest_sha256.txt.asc.ots": {
+    "status": "unknown",
+    "detail": ""
+  },
+  "manifest_sha256.txt.ots": {
+    "status": "unknown",
+    "detail": ""
+  },
+  "root_hash.txt.ots": {
+    "status": "timeout",
+    "detail": "Network timeout checking OTS"
+  }
+}

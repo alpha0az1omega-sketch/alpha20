@@ -1,0 +1,19 @@
+Tweet 1 :
+Je viens de sceller Alpha-20. Ce n'est pas qu'un langage de programmation. C'est un artefact qui s'exécute, qui chante et qui prouve son existence sur la blockchain Bitcoin. 
+
+Découvrez le "Saint Graal" de l'interaction humain-IA. 🧵👇
+
+Tweet 2 :
+Au lieu de lignes de code, vous assemblez des glyphes. 
+- Vous les entendez (Web Audio).
+- Vous les voyez (SVG dynamique).
+- L'IA vous guide (Cloudflare Workers AI).
+- Tout est ancré cryptographiquement (OpenTimestamps).
+
+Tweet 3 :
+Ce projet a été construit par un humain (sans bagage de codeur) et une IA, dans un but d'équilibre et de vérité.
+
+Le code est ouvert (AGPL-3.0). Le DOI est disponible. L'avenir est à la collaboration vérifiable.
+
+Explorez le playground : alpha0az1omega.com
+#Alpha20 #AI #OpenSource #WebAudio #Cryptography

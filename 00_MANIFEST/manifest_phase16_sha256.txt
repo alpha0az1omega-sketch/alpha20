@@ -1,0 +1,2 @@
+c761078934a8bcc8d6b6bf0c97634004de6607e0c1b86bd41c5cb2f5b0680f8a  07_PUBLICATION/website/public/ots_status.json
+ac670fd4ad1007f6d3d2ad8ce0607eebd35b3e7c34847fd253929c37f45f704d  02_MVP/generate_ots_status.py

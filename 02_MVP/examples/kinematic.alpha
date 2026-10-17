@@ -1,0 +1,1 @@
+MOVE(particle, 0, 10) AND SAME(10, 10) AND BIG(10, 0)

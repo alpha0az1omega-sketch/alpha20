@@ -1,0 +1,15 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+<Layout title="Contact">
+  <h1>Contact</h1>
+  <p>For licensing, collaboration, or press inquiries, please use the form below.</p>
+  <div style="margin-top: 20px; padding: 20px; border: 1px solid #ddd; border-radius: 8px;">
+    <p style="color: #666; font-size: 14px;">(Form integration with Formspree/Netlify Forms will be configured upon deployment)</p>
+    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" style="display: flex; flex-direction: column; gap: 10px;">
+      <input type="email" name="email" placeholder="Your Email" required style="padding: 8px; border: 1px solid #ccc; border-radius: 4px;" />
+      <textarea name="message" placeholder="Your Message" required style="padding: 8px; border: 1px solid #ccc; border-radius: 4px; height: 100px;"></textarea>
+      <button type="submit" style="padding: 10px; background: #1a1a2e; color: #fff; border: none; border-radius: 4px; cursor: pointer;">Send</button>
+    </form>
+  </div>
+</Layout>

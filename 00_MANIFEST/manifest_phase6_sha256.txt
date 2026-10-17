@@ -1,0 +1,2 @@
+c7b4d664c97634a7ad30b2db952ca06cb346331e7af608af78ef1202ca25e325  02_MVP/build_agentic_svg.py
+f7517c536ee4152c2b0bc7747206300087c384b6541826f76e231ab72feba4f6  04_ARTIFACTS/svg/glyph_agentic_v2.svg

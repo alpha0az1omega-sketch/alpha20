@@ -1,0 +1,25 @@
+{
+  "version": "0.1.0",
+  "primitives": [
+    { "id": "EXIST", "layer": "L0", "formal": "∃x : x ∈ Domain", "english": "There is something.", "sonification": { "freq_hz": 440, "duration_ms": 200, "adsr": [0.01, 0.05, 0.7, 0.24] } },
+    { "id": "CAUSE", "layer": "L1", "formal": "A → B", "english": "Because of this, that happens.", "sonification": { "freq_start": 330, "freq_end": 495, "duration_ms": 350, "adsr": [0.05, 0.1, 0.6, 0.25] } },
+    { "id": "PART",  "layer": "L1", "formal": "x ⊑ y", "english": "This is part of that.", "sonification": { "freq_hz": 523, "duration_ms": 180, "adsr": [0.02, 0.08, 0.5, 0.4] } },
+    { "id": "SAME",  "layer": "L0", "formal": "x ≡ y", "english": "This is the same as that.", "sonification": { "freq_hz": 440, "duration_ms": 300, "adsr": [0.01, 0.01, 0.9, 0.08] } },
+    { "id": "ONE",   "layer": "L0", "formal": "|S| = 1", "english": "There is one of these.", "sonification": { "freq_hz": 659, "duration_ms": 150, "adsr": [0.005, 0.02, 0.8, 0.175] } },
+    { "id": "ALL",   "layer": "L0", "formal": "∀x ∈ S : P(x)", "english": "All of these.", "sonification": { "freq_hz": [440, 554, 659], "duration_ms": 400, "adsr": [0.1, 0.2, 0.5, 0.2] } },
+    { "id": "NOT",   "layer": "L0", "formal": "¬P", "english": "It is not like this.", "sonification": { "freq_hz": 220, "duration_ms": 120, "adsr": [0.001, 0.01, 0.2, 0.789] } },
+    { "id": "IF",    "layer": "L0", "formal": "P → Q", "english": "If this, then that.", "sonification": { "freq_hz": 392, "duration_ms": 250, "adsr": [0.02, 0.05, 0.7, 0.23] } },
+    { "id": "DO",    "layer": "L2", "formal": "do(a, x)", "english": "Someone does something.", "sonification": { "freq_hz": 349, "duration_ms": 200, "adsr": [0.01, 0.03, 0.8, 0.16] } },
+    { "id": "HAPPEN","layer": "L2", "formal": "happen(E, t)", "english": "Something happens.", "sonification": { "freq_hz": 294, "vibrato_hz": 5, "duration_ms": 300, "adsr": [0.05, 0.1, 0.6, 0.25] } },
+    { "id": "KNOW",  "layer": "L3", "formal": "know(a, P)", "english": "Someone knows something.", "sonification": { "freq_hz": 587, "duration_ms": 250, "adsr": [0.02, 0.05, 0.8, 0.13] } },
+    { "id": "SEE",   "layer": "L3", "formal": "see(a, x)", "english": "Someone sees something.", "sonification": { "freq_hz": 880, "duration_ms": 100, "adsr": [0.001, 0.01, 0.1, 0.889] } },
+    { "id": "BIG",   "layer": "L1", "formal": "size(x) > size(y)", "english": "This is big.", "sonification": { "freq_hz": 110, "duration_ms": 400, "adsr": [0.1, 0.2, 0.5, 0.2] } },
+    { "id": "LIVE",  "layer": "L4", "formal": "live(x, t)", "english": "Something is alive.", "sonification": { "freq_hz": [220, 330], "beat_hz": 5, "duration_ms": 500, "adsr": [0.1, 0.2, 0.4, 0.3] } },
+    { "id": "DIE",   "layer": "L4", "formal": "¬live(x, t_final)", "english": "Something dies.", "sonification": { "freq_hz": 165, "duration_ms": 600, "adsr": [0.01, 0.3, 0.1, 0.59] } },
+    { "id": "MOVE",  "layer": "L2", "formal": "move(x, p1, p2)", "english": "Something moves.", "sonification": { "freq_start": 440, "freq_end": 554, "duration_ms": 200, "adsr": [0.01, 0.05, 0.8, 0.14] } },
+    { "id": "THINK", "layer": "L3", "formal": "think(a, P)", "english": "Someone thinks about something.", "sonification": { "freq_hz": [523, 659], "duration_ms": 300, "adsr": [0.05, 0.1, 0.7, 0.15] } },
+    { "id": "SAY",   "layer": "L3", "formal": "say(a, m)", "english": "Someone says something.", "sonification": { "freq_hz": 392, "modulation_hz": 10, "duration_ms": 200, "adsr": [0.01, 0.02, 0.8, 0.17] } },
+    { "id": "TRUE",  "layer": "L0", "formal": "⊨ P", "english": "This is true.", "sonification": { "freq_hz": 659, "duration_ms": 400, "adsr": [0.001, 0.001, 1.0, 0.0] } },
+    { "id": "GOOD",  "layer": "L4", "formal": "good(x)", "english": "This is good.", "sonification": { "freq_hz": 784, "duration_ms": 250, "adsr": [0.02, 0.05, 0.8, 0.13] } }
+  ]
+}

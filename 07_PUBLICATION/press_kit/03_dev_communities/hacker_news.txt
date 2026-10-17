@@ -1,0 +1,18 @@
+Titre : Show HN: Alpha-20 – An executable, sonorous, and cryptographic language
+
+Texte :
+Hi HN,
+
+I've been working on Alpha-20, a formal language built on 20 semantic primitives (L0-L4). What makes it different is that it's not just text-based.
+
+1. It compiles to Python and WASM.
+2. It generates deterministic SVG glyphs.
+3. It synthesizes audio via the Web Audio API (each primitive has a specific frequency).
+4. Every state change is hashed (SHA-256) and timestamped (OpenTimestamps).
+
+I'm not a traditional programmer; I built this in collaboration with an AI. The whole archive is cryptographically sealed. The site includes an interactive node-based playground (React Flow) and an AI tutor.
+
+You can try the playground here: [Link]
+You can verify the cryptographic proofs here: [Link]
+
+I would love to get your feedback on the grammar and the execution model.

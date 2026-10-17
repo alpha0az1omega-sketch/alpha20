@@ -1,0 +1,13 @@
+---
+import Layout from '../layouts/Layout.astro';
+import AlphaGraphV2 from '../components/AlphaGraphV2';
+import TutorSidebar from '../components/TutorSidebar';
+---
+<Layout title="Playground V2 (Accessible)">
+  <h1>Cognitive Playground V2</h1>
+  <p style="margin-bottom: 20px;">Fully accessible: click or press Enter on a node to hear its sound and definition via Web Speech.</p>
+  <div style="display: flex; gap: 20px; align-items: flex-start;">
+    <div style="flex: 2;"><AlphaGraphV2 client:only="react" /></div>
+    <div style="flex: 1;"><TutorSidebar client:only="react" /></div>
+  </div>
+</Layout>

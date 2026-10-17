@@ -1,0 +1,35 @@
+---
+// Client-side verification component for OTS proofs.
+---
+<div id="verify-form">
+  <h2>Verify an OpenTimestamps proof</h2>
+  <p>Paste the original file hash (hex) and select the .ots proof file.</p>
+  <label>SHA-256 hash: <input type="text" id="hash-input" placeholder="64 hex characters" size="64" /></label>
+  <label>Proof file (.ots): <input type="file" id="ots-input" accept=".ots" /></label>
+  <button id="verify-btn">Verify</button>
+  <pre id="verify-result"></pre>
+</div>
+
+<script>
+  import { verifyDigest, parseOts } from 'zeitstempel';
+
+  document.getElementById('verify-btn')?.addEventListener('click', async () => {
+    const hash = (document.getElementById('hash-input') as HTMLInputElement).value.trim();
+    const fileInput = document.getElementById('ots-input') as HTMLInputElement;
+    const resultEl = document.getElementById('verify-result')!;
+
+    if (!hash || !fileInput.files?.[0]) {
+      resultEl.textContent = 'Please provide both a hash and an .ots file.';
+      return;
+    }
+
+    try {
+      const otsBytes = new Uint8Array(await fileInput.files[0].arrayBuffer());
+      const ots = parseOts(otsBytes);
+      const result = await verifyDigest(hash, ots);
+      resultEl.textContent = JSON.stringify(result, null, 2);
+    } catch (e) {
+      resultEl.textContent = 'Verification failed: ' + (e as Error).message;
+    }
+  });
+</script>

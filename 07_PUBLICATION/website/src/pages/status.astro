@@ -1,0 +1,20 @@
+---
+import Layout from '../layouts/Layout.astro';
+const status = await import('../../public/ots_status.json').then(m => m.default);
+---
+<Layout title="OTS Status">
+  <h1>OpenTimestamps Proof Status</h1>
+  <p>This page reflects the state of all cryptographic proofs in the archive.</p>
+  <table>
+    <thead><tr><th>Proof</th><th>Status</th><th>Detail</th></tr></thead>
+    <tbody>
+      {Object.entries(status).map(([name, s]: [string, any]) => (
+        <tr>
+          <td><code>{name}</code></td>
+          <td><strong style={`color:${s.status === 'confirmed' ? '#2ca02c' : '#d62728'}`}>{s.status}</strong></td>
+          <td>{s.detail}</td>
+        </tr>
+      ))}
+    </tbody>
+  </table>
+</Layout>

@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="560" height="740" viewBox="0 0 560 740">
+<defs><marker id="a" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><polygon points="0 0,10 3,0 6" fill="context-stroke"/></marker></defs>
+<rect width="100%" height="100%" fill="#fafafa"/>
+<text x="280" y="28" font-family="monospace" font-size="16" text-anchor="middle" fill="#222">ALPHA-20 GLYPH ATLAS - 20 primitives, layers L0-L4</text>
+<rect x="0" y="40" width="140" height="140" fill="none" stroke="#ddd"/>
+<circle cx="70" cy="110" r="20" fill="#1f77b4"/>
+<text x="70" y="166" font-family="monospace" font-size="11" text-anchor="middle" fill="#222">EXIST</text>
+<text x="70" y="178" font-family="monospace" font-size="9" text-anchor="middle" fill="#888">L0</text>
+<rect x="140" y="40" width="140" height="140" fill="none" stroke="#ddd"/>
+<line x1="185" y1="110" x2="235" y2="110" stroke="#d62728" stroke-width="4" marker-end="url(#a)"/>
+<text x="210" y="166" font-family="monospace" font-size="11" text-anchor="middle" fill="#222">CAUSE</text>
+<text x="210" y="178" font-family="monospace" font-size="9" text-anchor="middle" fill="#888">L1</text>
+<rect x="280" y="40" width="140" height="140" fill="none" stroke="#ddd"/>
+<circle cx="350" cy="110" r="24" fill="none" stroke="#2ca02c" stroke-width="3"/><circle cx="350" cy="110" r="10" fill="#2ca02c"/>
+<text x="350" y="166" font-family="monospace" font-size="11" text-anchor="middle" fill="#222">PART</text>
+<text x="350" y="178" font-family="monospace" font-size="9" text-anchor="middle" fill="#888">L1</text>
+<rect x="420" y="40" width="140" height="140" fill="none" stroke="#ddd"/>
+<rect x="464" y="96" width="24" height="28" fill="#9467bd"/><rect x="492" y="96" width="24" height="28" fill="#9467bd"/>
+<text x="490" y="166" font-family="monospace" font-size="11" text-anchor="middle" fill="#222">SAME</text>
+<text x="490" y="178" font-family="monospace" font-size="9" text-anchor="middle" fill="#888">L0</text>
+<rect x="0" y="180" width="140" height="140" fill="none" stroke="#ddd"/>
+<circle cx="70" cy="250" r="8" fill="#8c564b"/>
+<text x="70" y="306" font-family="monospace" font-size="11" text-anchor="middle" fill="#222">ONE</text>
+<text x="70" y="318" font-family="monospace" font-size="9" text-anchor="middle" fill="#888">L0</text>
+<rect x="140" y="180" width="140" height="140" fill="none" stroke="#ddd"/>
+<rect x="186" y="226" width="48" height="48" fill="#e377c2"/>
+<text x="210" y="306" font-family="monospace" font-size="11" text-anchor="middle" fill="#222">ALL</text>
+<text x="210" y="318" font-family="monospace" font-size="9" text-anchor="middle" fill="#888">L0</text>
+<rect x="280" y="180" width="140" height="140" fill="none" stroke="#ddd"/>
+<circle cx="350" cy="250" r="20" fill="none" stroke="#7f7f7f" stroke-width="3"/><line x1="334" y1="266" x2="366" y2="234" stroke="#7f7f7f" stroke-width="3"/>
+<text x="350" y="306" font-family="monospace" font-size="11" text-anchor="middle" fill="#222">NOT</text>
+<text x="350" y="318" font-family="monospace" font-size="9" text-anchor="middle" fill="#888">L0</text>
+<rect x="420" y="180" width="140" height="140" fill="none" stroke="#ddd"/>
+<polygon points="490,226 514,250 490,274 466,250" fill="none" stroke="#bcbd22" stroke-width="3"/>
+<text x="490" y="306" font-family="monospace" font-size="11" text-anchor="middle" fill="#222">IF</text>
+<text x="490" y="318" font-family="monospace" font-size="9" text-anchor="middle" fill="#888">L0</text>
+<rect x="0" y="320" width="140" height="140" fill="none" stroke="#ddd"/>
+<circle cx="70" cy="390" r="18" fill="#17becf"/>
+<text x="70" y="446" font-family="monospace" font-size="11" text-anchor="middle" fill="#222">DO</text>
+<text x="70" y="458" font-family="monospace" font-size="9" text-anchor="middle" fill="#888">L2</text>
+<rect x="140" y="320" width="140" height="140" fill="none" stroke="#ddd"/>
+<path d="M185,390 Q197,370 210,390 T235,390" fill="none" stroke="#ff7f0e" stroke-width="3"/>
+<text x="210" y="446" font-family="monospace" font-size="11" text-anchor="middle" fill="#222">HAPPEN</text>
+<text x="210" y="458" font-family="monospace" font-size="9" text-anchor="middle" fill="#888">L2</text>
+<rect x="280" y="320" width="140" height="140" fill="none" stroke="#ddd"/>
+<ellipse cx="350" cy="390" rx="28" ry="15" fill="none" stroke="#1f77b4" stroke-width="3"/><circle cx="350" cy="390" r="7" fill="#1f77b4"/>
+<text x="350" y="446" font-family="monospace" font-size="11" text-anchor="middle" fill="#222">KNOW</text>
+<text x="350" y="458" font-family="monospace" font-size="9" text-anchor="middle" fill="#888">L3</text>
+<rect x="420" y="320" width="140" height="140" fill="none" stroke="#ddd"/>
+<polygon points="490,366 514,406 466,406" fill="none" stroke="#2ca02c" stroke-width="3"/><circle cx="490" cy="393" r="7" fill="#2ca02c"/>
+<text x="490" y="446" font-family="monospace" font-size="11" text-anchor="middle" fill="#222">SEE</text>
+<text x="490" y="458" font-family="monospace" font-size="9" text-anchor="middle" fill="#888">L3</text>
+<rect x="0" y="460" width="140" height="140" fill="none" stroke="#ddd"/>
+<circle cx="70" cy="530" r="30" fill="#d62728"/>
+<text x="70" y="586" font-family="monospace" font-size="11" text-anchor="middle" fill="#222">BIG</text>
+<text x="70" y="598" font-family="monospace" font-size="9" text-anchor="middle" fill="#888">L1</text>
+<rect x="140" y="460" width="140" height="140" fill="none" stroke="#ddd"/>
+<path d="M210,510 C244,517 244,543 210,550" fill="none" stroke="#2ca02c" stroke-width="3"/>
+<text x="210" y="586" font-family="monospace" font-size="11" text-anchor="middle" fill="#222">LIVE</text>
+<text x="210" y="598" font-family="monospace" font-size="9" text-anchor="middle" fill="#888">L4</text>
+<rect x="280" y="460" width="140" height="140" fill="none" stroke="#ddd"/>
+<path d="M350,510 C384,517 384,543 350,550 L355,552" fill="none" stroke="#7f7f7f" stroke-width="3"/>
+<text x="350" y="586" font-family="monospace" font-size="11" text-anchor="middle" fill="#222">DIE</text>
+<text x="350" y="598" font-family="monospace" font-size="9" text-anchor="middle" fill="#888">L4</text>
+<rect x="420" y="460" width="140" height="140" fill="none" stroke="#ddd"/>
+<path d="M465,530 Q490,505 515,530" fill="none" stroke="#17becf" stroke-width="4" marker-end="url(#a)"/>
+<text x="490" y="586" font-family="monospace" font-size="11" text-anchor="middle" fill="#222">MOVE</text>
+<text x="490" y="598" font-family="monospace" font-size="9" text-anchor="middle" fill="#888">L2</text>
+<rect x="0" y="600" width="140" height="140" fill="none" stroke="#ddd"/>
+<circle cx="56" cy="670" r="10" fill="none" stroke="#9467bd" stroke-width="3"/><circle cx="84" cy="670" r="10" fill="none" stroke="#9467bd" stroke-width="3"/><line x1="66" y1="670" x2="74" y2="670" stroke="#9467bd" stroke-width="3"/>
+<text x="70" y="726" font-family="monospace" font-size="11" text-anchor="middle" fill="#222">THINK</text>
+<text x="70" y="738" font-family="monospace" font-size="9" text-anchor="middle" fill="#888">L3</text>
+<rect x="140" y="600" width="140" height="140" fill="none" stroke="#ddd"/>
+<rect x="186" y="654" width="48" height="26" fill="none" stroke="#ff7f0e" stroke-width="3"/><polygon points="203,680 210,692 217,680" fill="#ff7f0e"/>
+<text x="210" y="726" font-family="monospace" font-size="11" text-anchor="middle" fill="#222">SAY</text>
+<text x="210" y="738" font-family="monospace" font-size="9" text-anchor="middle" fill="#888">L3</text>
+<rect x="280" y="600" width="140" height="140" fill="none" stroke="#ddd"/>
+<circle cx="350" cy="670" r="24" fill="none" stroke="#1f77b4" stroke-width="3"/><circle cx="350" cy="670" r="14" fill="none" stroke="#1f77b4" stroke-width="3"/>
+<text x="350" y="726" font-family="monospace" font-size="11" text-anchor="middle" fill="#222">TRUE</text>
+<text x="350" y="738" font-family="monospace" font-size="9" text-anchor="middle" fill="#888">L0</text>
+<rect x="420" y="600" width="140" height="140" fill="none" stroke="#ddd"/>
+<circle cx="490" cy="670" r="22" fill="none" stroke="#2ca02c" stroke-width="3"/><line x1="480" y1="670" x2="500" y2="670" stroke="#2ca02c" stroke-width="3"/><line x1="490" y1="660" x2="490" y2="680" stroke="#2ca02c" stroke-width="3"/>
+<text x="490" y="726" font-family="monospace" font-size="11" text-anchor="middle" fill="#222">GOOD</text>
+<text x="490" y="738" font-family="monospace" font-size="9" text-anchor="middle" fill="#888">L4</text>
+</svg>
