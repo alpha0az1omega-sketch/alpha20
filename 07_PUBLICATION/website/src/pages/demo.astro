@@ -1,12 +1,17 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import fs from 'node:fs';
+import path from 'node:path';
+// On lit le contenu du SVG directement depuis le dossier public
+const svgPath = path.join(process.cwd(), 'public', 'glyph_agentic_v2.svg');
+const svgContent = fs.readFileSync(svgPath, 'utf-8');
 ---
 <Layout title="Demo">
   <h1>Agentic Glyph</h1>
-  <p>This SVG is not an image; it is an agent. It contains its own parser, evaluator, state, and Web Audio synthesizer. Click <strong>EVALUATE + PLAY</strong> to execute an L.E.U. expression and hear the mathematics. Click <strong>SEAL</strong> to hash the internal state with SHA-256.</p>
+  <p>This SVG is not an image; it is an agent. Click <strong>EVALUATE + PLAY</strong> to execute an L.E.U. expression. Click <strong>SEAL</strong> to hash the state.</p>
   
-  <div style="margin-top: 2rem; border: 1px solid #eaeaea; border-radius: 8px; overflow: hidden; background: white; padding: 1rem;">
-    <!-- On charge le SVG directement sans iframe pour autoriser le JavaScript -->
-    <object type="image/svg+xml" data="/glyph_agentic_v2.svg" width="100%" height="800px"></object>
+  <div style="margin-top: 2rem; border: 1px solid #eaeaea; border-radius: 8px; overflow: hidden; background: white;">
+    <!-- Injection directe du SVG dans le DOM -->
+    <div set:html={svgContent}></div>
   </div>
 </Layout>
