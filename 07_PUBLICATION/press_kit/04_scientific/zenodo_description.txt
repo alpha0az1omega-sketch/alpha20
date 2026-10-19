@@ -1,4 +1,11 @@
-Title: ALPHA-20: A Multimodal, Executable, and Cryptographic Language for Human-AI Collaboration
+Lingua Executabilis Universalis (L.E.U.) is a novel, executable, and cryptographically traceable formal language. It bridges human cognition and machine verification through 20 universal semantic primitives (L0-L4), integrating deterministic SVG visual rendering, Web Audio API sonification, and cryptographic provenance (SHA-256 + OpenTimestamps).
 
-Description:
-Alpha-20 is a novel formal language built on 20 universal semantic primitives (L0-L4). It bridges human cognition and machine verification by integrating deterministic SVG visual rendering, Web Audio API sonification, and cryptographic provenance (SHA-256 + OpenTimestamps). The archive includes a Python compiler, a WebAssembly runtime, an interactive node-based playground, and a comprehensive whitepaper. The project introduces the Multimodal Coherence Formula (FCM-20) to quantify the integrity of artifacts across physical, biological, and computational domains. Created through human-AI collaboration, it is released under a dual license (CC BY-SA 4.0 / AGPL-3.0).
+The archive includes:
+- A Python compiler and a WebAssembly (WASM) runtime.
+- An interactive, AI-assisted node-based playground (React Flow).
+- The Agentic Glyph, a self-sealing, sonorous SVG artifact.
+- The TELA (Trusted Edge Logic Agents) protocol for verifying AI actions.
+- An identity registry for cryptographic agent verification.
+- A comprehensive whitepaper and the Multimodal Coherence Formula (FCM-20).
+
+Created through a harmonious collaboration between a human (Alpha0az1omega) and an AI (DeepSeek), this project demonstrates a new paradigm for verifiable, open, and poetic technology. It is released under the PolyForm Noncommercial License 1.0.0.
