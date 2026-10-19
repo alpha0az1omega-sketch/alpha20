@@ -1,0 +1,19 @@
+{
+  "registry_version": "1.0.0",
+  "agents": [
+    {
+      "agent_id": "alpha0az1omega-human",
+      "type": "human",
+      "public_key_fingerprint": "4ED4A15BB5998C6239DE340336D4AEC00ADD1AEE",
+      "status": "active",
+      "registered_at": "2026-10-19T08:00:00Z"
+    },
+    {
+      "agent_id": "leu-tutor-ai",
+      "type": "ai",
+      "public_key_fingerprint": "PLACEHOLDER_FOR_AI_KEY",
+      "status": "active",
+      "registered_at": "2026-10-19T08:05:00Z"
+    }
+  ]
+}
