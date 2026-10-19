@@ -1,18 +1,18 @@
 {
-  "name": "alpha20-website",
+  "name": "leu-website",
   "compatibility_date": "2026-10-01",
   "pages_build_output_dir": "dist",
   "d1_databases": [
     {
       "binding": "DB",
-      "database_name": "alpha20-contracts",
-      "database_id": "6cd76bf1-be6b-45c4-b4e0-43d8d84c7154"
+      "database_name": "leu-contracts",
+      "database_id": "73e880c1-427c-4faa-9404-364446289199"
     }
   ],
   "kv_namespaces": [
     {
       "binding": "OTS_CACHE",
-      "id": "b5303870f5324a3f80fbe99d692fb995"
+      "id": "3c81b656357140fe8dbab922a6d9d1c3"
     }
   ],
   "ai": {
