@@ -7,34 +7,33 @@ export default function TutorSidebar() {
 
   const sendMessage = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!input.trim()) return;
+    if (!input.trim() || loading) return;
 
     const userMsg = input;
     setMessages(prev => [...prev, { role: 'user', text: userMsg }]);
     setInput('');
     setLoading(true);
 
+    // Format history for the AI API context
+    const history = messages.map(m => ({
+      role: m.role === 'user' ? 'user' : 'assistant',
+      content: m.text
+    }));
+
     try {
       const res = await fetch('/api/tutor', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ message: userMsg })
+        body: JSON.stringify({ message: userMsg, history })
       });
-      if (!res.ok) throw new Error("API non disponible en local");
+      if (!res.ok) throw new Error("API request failed");
       const data = await res.json();
       setMessages(prev => [...prev, { role: 'ai', text: data.reply }]);
     } catch (err) {
-      // Mode Simulation (Fallback pour le test local)
-      setTimeout(() => {
-        setMessages(prev => [...prev, { 
-          role: 'ai', 
-          text: "En mode local, je simule. Voici un exemple : MOVE(particle, 0, 10) AND SAME(10, 10)." 
-        }]);
-        setLoading(false);
-      }, 800);
-      return;
+      setMessages(prev => [...prev, { role: 'ai', text: "Error: Unable to connect to the AI service. Please try again." }]);
+    } finally {
+      setLoading(false);
     }
-    setLoading(false);
   };
 
   const extractExpression = (text: string) => {
@@ -44,9 +43,9 @@ export default function TutorSidebar() {
 
   return (
     <div className="tutor-sidebar">
-      <h3 style={{ margin: '0 0 10px 0', fontSize: '14px', color: '#17becf' }}>Tuteur L.E.U</h3>
+      <h3 style={{ margin: '0 0 10px 0', fontSize: '14px', color: '#17becf' }}>L.E.U. Tutor</h3>
       <div className="chat-window" style={{ height: '400px', overflowY: 'auto', border: '1px solid #ddd', padding: '10px', borderRadius: '4px', background: '#fff' }}>
-        {messages.length === 0 && <p style={{ color: '#888', fontSize: '12px' }}>Posez une question sur la grammaire ou demandez un exemple.</p>}
+        {messages.length === 0 && <p style={{ color: '#888', fontSize: '12px' }}>Ask a question about the grammar or request an example.</p>}
         {messages.map((m, i) => (
           <div key={i} style={{ marginBottom: '10px', textAlign: m.role === 'user' ? 'right' : 'left' }}>
             <span style={{ display: 'inline-block', padding: '6px 10px', borderRadius: '8px', fontSize: '13px', background: m.role === 'user' ? '#17becf' : '#f0f0f0', color: m.role === 'user' ? '#fff' : '#333' }}>
@@ -61,17 +60,30 @@ export default function TutorSidebar() {
                   }}
                   style={{ fontSize: '11px', padding: '4px 8px', cursor: 'pointer', background: '#2ca02c', color: '#fff', border: 'none', borderRadius: '4px' }}
                 >
-                  ▶ Dessiner sur le plateau
+                  ▶ Draw on canvas
                 </button>
               </div>
             )}
           </div>
         ))}
-        {loading && <p style={{ color: '#17becf', fontSize: '12px' }}>L'IA réfléchit...</p>}
+        {loading && <p style={{ color: '#17becf', fontSize: '12px' }}>AI is thinking...</p>}
       </div>
       <form onSubmit={sendMessage} style={{ display: 'flex', marginTop: '10px' }}>
-        <input type="text" value={input} onChange={(e) => setInput(e.target.value)} placeholder="Ex: Donne-moi un exemple." style={{ flex: 1, padding: '8px', border: '1px solid #ddd', borderRadius: '4px 0 0 4px', fontSize: '13px' }} />
-        <button type="submit" style={{ padding: '8px 15px', background: '#1a1a2e', color: '#fff', border: 'none', borderRadius: '0 4px 4px 0', cursor: 'pointer' }}>Envoyer</button>
+        <input 
+          type="text" 
+          value={input} 
+          onChange={(e) => setInput(e.target.value)} 
+          placeholder="Ex: Give me an example." 
+          style={{ flex: 1, padding: '8px', border: '1px solid #ddd', borderRadius: '4px 0 0 4px', fontSize: '13px' }} 
+          disabled={loading}
+        />
+        <button 
+          type="submit" 
+          style={{ padding: '8px 15px', background: '#1a1a2e', color: '#fff', border: 'none', borderRadius: '0 4px 4px 0', cursor: loading ? 'not-allowed' : 'pointer' }}
+          disabled={loading}
+        >
+          Send
+        </button>
       </form>
     </div>
   );
