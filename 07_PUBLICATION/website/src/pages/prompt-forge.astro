@@ -3,9 +3,9 @@ import Layout from '../layouts/Layout.astro';
 ---
 <Layout title="Prompt Forge">
   <h1>Prompt Forge</h1>
-  <p>Create, hash, and secure your Alpha-20 prompts.</p>
+  <p>Create, hash, and secure your L.E.U. prompts.</p>
   <div style="margin-top: 20px;">
-    <textarea id="prompt-input" placeholder="Enter your Alpha-20 expression here..." style="width: 100%; height: 150px; padding: 10px; border: 1px solid #ccc; border-radius: 4px; font-family: monospace;"></textarea>
+    <textarea id="prompt-input" placeholder="Enter your L.E.U. expression here..." style="width: 100%; height: 150px; padding: 10px; border: 1px solid #ccc; border-radius: 4px; font-family: monospace;"></textarea>
     <button id="hash-btn" style="margin-top: 10px; padding: 10px 20px; background: #2ca02c; color: #fff; border: none; border-radius: 4px; cursor: pointer;">Generate SHA-256 Proof</button>
     <pre id="hash-output" style="margin-top: 10px; padding: 10px; background: #f5f5f5; border-radius: 4px; font-size: 12px; white-space: pre-wrap;"></pre>
   </div>
@@ -14,12 +14,10 @@ import Layout from '../layouts/Layout.astro';
       const input = (document.getElementById('prompt-input') as HTMLTextAreaElement).value;
       const output = document.getElementById('hash-output')!;
       if (!input.trim()) { output.textContent = 'Please enter a prompt.'; return; }
-      
       const msgBuffer = new TextEncoder().encode(input);
       const hashBuffer = await crypto.subtle.digest('SHA-256', msgBuffer);
       const hashArray = Array.from(new Uint8Array(hashBuffer));
       const hashHex = hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
-      
       output.textContent = `SHA-256: ${hashHex}\n\nTo timestamp this proof on Bitcoin, save this hash and run:\n ots stamp hash.txt`;
     });
   </script>
