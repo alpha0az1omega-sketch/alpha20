@@ -1,17 +1,13 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import fs from 'node:fs';
-import path from 'node:path';
-// On lit le contenu du SVG directement depuis le dossier public
-const svgPath = path.join(process.cwd(), 'public', 'glyph_agentic_v2.svg');
-const svgContent = fs.readFileSync(svgPath, 'utf-8');
 ---
 <Layout title="Demo">
   <h1>Agentic Glyph</h1>
-  <p>This SVG is not an image; it is an agent. Click <strong>EVALUATE + PLAY</strong> to execute an L.E.U. expression. Click <strong>SEAL</strong> to hash the state.</p>
+  <p>Due to browser security restrictions, interactive SVGs cannot run inside an iframe. Click the button below to open the standalone Agentic Glyph in a new tab, where it becomes fully interactive.</p>
   
-  <div style="margin-top: 2rem; border: 1px solid #eaeaea; border-radius: 8px; overflow: hidden; background: white;">
-    <!-- Injection directe du SVG dans le DOM -->
-    <div set:html={svgContent}></div>
+  <div style="margin-top: 2rem; text-align: center;">
+    <a href="/glyph_agentic_v2.svg" target="_blank" style="display: inline-block; padding: 1rem 2rem; background: #17becf; color: white; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 1.2rem;">
+      ▶ Open Interactive Glyph
+    </a>
   </div>
 </Layout>
