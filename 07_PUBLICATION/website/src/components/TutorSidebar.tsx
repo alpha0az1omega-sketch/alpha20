@@ -44,7 +44,7 @@ export default function TutorSidebar() {
 
   return (
     <div className="tutor-sidebar">
-      <h3 style={{ margin: '0 0 10px 0', fontSize: '14px', color: '#17becf' }}>Tuteur Alpha-20</h3>
+      <h3 style={{ margin: '0 0 10px 0', fontSize: '14px', color: '#17becf' }}>Tuteur L.E.U</h3>
       <div className="chat-window" style={{ height: '400px', overflowY: 'auto', border: '1px solid #ddd', padding: '10px', borderRadius: '4px', background: '#fff' }}>
         {messages.length === 0 && <p style={{ color: '#888', fontSize: '12px' }}>Posez une question sur la grammaire ou demandez un exemple.</p>}
         {messages.map((m, i) => (
