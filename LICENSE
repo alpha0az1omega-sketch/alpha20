@@ -1,8 +1,13 @@
-ALPHA-20 — Licence double
+Lingua Executabilis Universalis (L.E.U.) — PolyForm Noncommercial License 1.0.0
 
-1. Spécification (Whitepaper, grammaire, primitives) : CC BY-SA 4.0
-2. Code (compilateur, glyphe agentique, site web) : AGPL-3.0
-3. Pour un usage commercial privé (sans obligation d'ouverture du code) :
-   contactez alpha0az1omega@proton.me pour une licence commerciale.
+Copyright (c) 2026 Alpha0az1omega / Lingua Executabilis Universalis Foundation.
 
-Attribution : Alpha0az1omega (empreinte GPG : 1486F115...)
+This software is licensed under the PolyForm Noncommercial License 1.0.0.
+You may use, copy, modify, and distribute this software for any noncommercial purpose 
+(including personal use, education, and research).
+
+For commercial use (including SaaS, consulting, or integration into proprietary products), 
+a separate commercial license is required.
+
+Full text: https://polyformproject.org/licenses/noncommercial/1.0.0/
+Contact: alpha0az1omega@gmail.com
