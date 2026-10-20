@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>ALPHA-20 Whitepaper</title>
+<title>L.E.U. Whitepaper</title>
 <style>
-body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; max-width: 800px; margin: 40px auto; padding: 0 20px; color: #333; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; line-height: 1.6; max-width: 800px; margin: 40px auto; padding: 0 20px; color: #333; }
 h1 { border-bottom: 2px solid #eaeaea; padding-bottom: 10px; font-size: 2em; }
 h2 { border-bottom: 1px solid #eaeaea; padding-bottom: 5px; margin-top: 30px; font-size: 1.5em; }
 h3 { font-size: 1.2em; margin-top: 20px; }
@@ -17,55 +17,32 @@ strong { color: #111; }
 </style>
 </head>
 <body>
-<h1>ALPHA-20: A Universal Executable, Sonorous, and Cryptographic Language</h1>
+<h1>Lingua Executabilis Universalis (L.E.U.)</h1>
 <p><strong>Author:</strong> Alpha0az1omega</p>
-<p><strong>Date:</strong> 2026-10-17</p>
-<p><strong>Version:</strong> 1.0.0</p>
-<p><strong>License:</strong> CC BY 4.0</p>
+<p><strong>Date:</strong> 2026-10-19</p>
+<p><strong>Version:</strong> 2.0.0</p>
+<p><strong>License:</strong> PolyForm Noncommercial 1.0.0</p>
+<p><strong>DOI:</strong> 10.5281/zenodo.23476518</p>
 <h2>Abstract</h2>
-<p>Alpha-20 is a formal, executable, and cryptographically traceable language built on 20 universal semantic primitives. Organized across five ontological layers (L0-L4), it is designed to be read, written, and executed by humans, AI agents, and software across scientific disciplines. The language features a deterministic compiler to Python and WebAssembly, a native SVG glyph renderer, a Web Audio API sonification engine, and a state-sealing mechanism using SHA-256 and OpenTimestamps. This paper details the architecture, implementation, and cryptographic provenance of the Alpha-20 ecosystem.</p>
+<p>L.E.U. is a formal, executable, and cryptographically traceable language built on 20 universal semantic primitives. It compiles to Python and WebAssembly, renders deterministic SVG glyphs, synthesizes audio via Web Audio API, and seals every state change with SHA-256 and OpenTimestamps.</p>
 <h2>1. Introduction</h2>
-<p>Existing programming languages prioritize computation over semantic universality. Existing data formats prioritize presentation over executability. Alpha-20 bridges this gap by defining a minimal lexicon of primitives that map directly to formal logic, physics, biology, and computer science. An Alpha-20 expression is not merely a string; it is a verifiable, multi-modal artifact.</p>
-<h2>2. The Alpha-20 Lexicon</h2>
-<p>The language is built on 20 primitives, grouped into five layers:</p>
+<p>Existing languages prioritize computation over semantic universality. L.E.U. bridges this gap by defining a minimal lexicon of primitives that map directly to logic, physics, biology, and computer science.</p>
+<h2>2. The L.E.U. Lexicon</h2>
 <ul>
-<li>L0 (Formal Logic and Mathematics): EXIST, SAME, ONE, ALL, NOT, IF, TRUE</li>
-<li>L1 (Physical Causality and Magnitude): CAUSE, PART, BIG</li>
-<li>L2 (Event and Action): DO, HAPPEN, MOVE</li>
-<li>L3 (Cognition and Communication): KNOW, SEE, THINK, SAY</li>
-<li>L4 (Life and Value): LIVE, DIE, GOOD</li>
+<li><strong>L0 (Formal Logic):</strong> EXIST, SAME, ONE, ALL, NOT, IF, TRUE</li>
+<li><strong>L1 (Physical Causality):</strong> CAUSE, PART, BIG</li>
+<li><strong>L2 (Event and Action):</strong> DO, HAPPEN, MOVE</li>
+<li><strong>L3 (Cognition):</strong> KNOW, SEE, THINK, SAY</li>
+<li><strong>L4 (Life and Value):</strong> LIVE, DIE, GOOD</li>
 </ul>
-<h2>3. Architecture</h2>
-<p>The Alpha-20 ecosystem operates on four independent but synchronized layers:</p>
-<h3>3.1 L0: Formal Grammar</h3>
-<p>Expressions are parsed using a recursive descent parser implemented in both Python and JavaScript, strictly following the EBNF specification.</p>
-<h3>3.2 L1: Execution Targets</h3>
-<p>Expressions compile to executable Python predicates or WebAssembly text format (WAT). This ensures deterministic evaluation across environments.</p>
-<h3>3.3 L2: Sonification</h3>
-<p>Each primitive is mapped to a specific frequency, duration, and ADSR envelope. Evaluated expressions are synthesized in real-time via the Web Audio API, providing an auditory representation of the mathematical logic.</p>
-<h3>3.4 L3: Cryptographic Provenance</h3>
-<p>Every artifact, including source code, SVG outputs, and audio files, is hashed using SHA-256. The manifest of these hashes is signed with a GPG key and submitted to OpenTimestamps, anchoring the proof to the Bitcoin blockchain.</p>
-<h2>4. The Agentic Glyph</h2>
-<p>The Agentic Glyph is a self-contained SVG file. It embeds:</p>
-<ul>
-<li>The visual atlas of the 20 primitives.</li>
-<li>A JSON-LD state object.</li>
-<li>A JavaScript parser and evaluator.</li>
-<li>A Web Audio synthesizer.</li>
-<li>A SHA-256 sealing function using the Web Crypto API.</li>
-</ul>
-<p>When a user interacts with the glyph (e.g., clicking EVALUATE), the state mutates, the visual elements update, the audio plays, and the internal hash is recalculated. It is a closed-loop cognitive artifact.</p>
-<h2>5. Security and Verification</h2>
-<p>Verification of any Alpha-20 artifact requires:</p>
-<ul>
-<li>Recomputing the SHA-256 hash and comparing it to the manifest.</li>
-<li>Verifying the GPG signature of the manifest.</li>
-<li>Checking the OpenTimestamps proof against the Bitcoin blockchain.</li>
-</ul>
-<p>The public GPG key is included in the archive. The private key remains offline.</p>
-<h2>6. Conclusion</h2>
-<p>Alpha-20 demonstrates that a language can be simultaneously human-readable, machine-executable, audibly perceivable, and cryptographically verifiable. It is an open standard for verifiable interoperability between biological and artificial intelligence.</p>
-<h2>Reproduction</h2>
-<p>All source code, manifests, and proofs are available in the ALPHA_ARCHIVE_000 repository. Reproduction requires only a POSIX shell, Python 3, and a web browser.</p>
+<h2>3. Disruptive Applications</h2>
+<h3>3.1 TELA (Trusted Edge Logic Agents)</h3>
+<p>L.E.U. serves as the verification layer for probabilistic AI models. Before an AI executes an action, it must generate an L.E.U. expression that formally proves the action adheres to predefined axioms. This prevents hallucinations in critical systems.</p>
+<h3>3.2 The Identity Registry</h3>
+<p>Every AI agent is assigned a cryptographic identity (GPG key). L.E.U. acts as the protocol for agents to sign their state transitions, creating an immutable audit trail on the Bitcoin blockchain.</p>
+<h2>4. The Agentic Glyph & Live Artifacts</h2>
+<p>The Agentic Glyph is a self-contained SVG file containing its own parser, evaluator, state, and Web Audio synthesizer. The "Live Artifacts" extend this by displaying their own real-time SHA-256 hash, GPG fingerprint, and DOI directly within the SVG.</p>
+<h2>5. Conclusion</h2>
+<p>L.E.U. demonstrates that a language can be simultaneously human-readable, machine-executable, audibly perceivable, and cryptographically verifiable. It is an open standard for verifiable interoperability between biological and artificial intelligence.</p>
 </body>
 </html>
