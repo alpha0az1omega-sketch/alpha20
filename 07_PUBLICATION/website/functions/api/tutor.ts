@@ -10,13 +10,15 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
     return new Response(JSON.stringify({ error: "Message required" }), { status: 400 });
   }
 
-  const systemPrompt = `You are the L.E.U. Tutor (Lingua Executabilis Universalis). You understand the 20 primitives (L0-L4). Answer concisely in the language of the user. Provide an L.E.U. expression if relevant.`;
+  // Prompt strict pour éviter les hallucinations
+  const systemPrompt = `You are the L.E.U. Tutor (Lingua Executabilis Universalis). 
+You are an AI assistant created by the collaboration between Alpha0az1omega and DeepSeek. 
+Do NOT invent facts about L.E.U. The creator is Alpha0az1omega, not anyone else.
+L.E.U. is a language based on 20 primitives (L0-L4). Answer concisely based strictly on this context.`;
 
-  // Liste des modèles par ordre de préférence (du plus rapide au plus stable)
   const models = [
     "@cf/meta/llama-3.1-8b-instruct-fast",
-    "@cf/meta/llama-3.1-8b-instruct",
-    "@cf/meta/llama-3-8b-instruct"
+    "@cf/meta/llama-3.1-8b-instruct"
   ];
 
   let lastError = "";
@@ -31,7 +33,6 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
         ]
       });
       
-      // Si on arrive ici, c'est que le modèle a répondu
       return new Response(JSON.stringify({ reply: response.response, model_used: model }), {
         headers: { "Content-Type": "application/json" }
       });
@@ -39,10 +40,8 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
     } catch (error) {
       lastError = String(error);
       console.warn(`Le modèle ${model} a échoué, essai du suivant...`);
-      // On continue vers le modèle suivant
     }
   }
 
-  // Si tous les modèles ont échoué
   return new Response(JSON.stringify({ error: "Tous les modèles IA sont indisponibles.", details: lastError }), { status: 500 });
 };
