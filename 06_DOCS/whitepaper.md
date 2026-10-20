@@ -4,6 +4,7 @@
 **Date:** 2026-10-19
 **Version:** 2.0.0
 **License:** PolyForm Noncommercial 1.0.0
+**DOI:** 10.5281/zenodo.23476518
 
 ## Abstract
 L.E.U. is a formal, executable, and cryptographically traceable language built on 20 universal semantic primitives. It compiles to Python and WebAssembly, renders deterministic SVG glyphs, synthesizes audio via Web Audio API, and seals every state change with SHA-256 and OpenTimestamps. 
@@ -25,5 +26,8 @@ L.E.U. serves as the verification layer for probabilistic AI models. Before an A
 ### 3.2 The Identity Registry
 Every AI agent is assigned a cryptographic identity (GPG key). L.E.U. acts as the protocol for agents to sign their state transitions, creating an immutable audit trail on the Bitcoin blockchain.
 
-## 4. The Agentic Glyph
-A self-contained SVG file containing its own parser, evaluator, state, and Web Audio synthesizer. It serves as a closed-loop cognitive artifact.
+## 4. The Agentic Glyph & Live Artifacts
+The Agentic Glyph is a self-contained SVG file containing its own parser, evaluator, state, and Web Audio synthesizer. The "Live Artifacts" extend this by displaying their own real-time SHA-256 hash, GPG fingerprint, and DOI directly within the SVG.
+
+## 5. Conclusion
+L.E.U. demonstrates that a language can be simultaneously human-readable, machine-executable, audibly perceivable, and cryptographically verifiable. It is an open standard for verifiable interoperability between biological and artificial intelligence.
