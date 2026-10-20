@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://alpha0az1omega.com/sitemap.xml
