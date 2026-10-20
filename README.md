@@ -28,4 +28,4 @@ All artifacts are sealed and anchored to the Bitcoin blockchain.
 
 ## ⚖️ License
 PolyForm Noncommercial 1.0.0.
-For commercial use, contact: foundation@alpha0az1omega.com
+For commercial use, contact: alpha0az1omega@proton.me
