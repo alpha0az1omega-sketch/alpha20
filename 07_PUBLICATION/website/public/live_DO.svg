@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+<rect width="100%" height="100%" fill="#0a0a0a"/>
+<style>
+    .hud { font-family: 'Courier New', monospace; fill: #17becf; font-size: 14px; }
+    .title { font-family: 'Courier New', monospace; fill: #ffffff; font-size: 28px; font-weight: bold; }
+    .hash { font-family: 'Courier New', monospace; fill: #888; font-size: 10px; }
+    .btn { cursor: pointer; }
+    .btn:hover { opacity: 0.8; }
+</style>
+
+<!-- En-tête -->
+<text x="30" y="50" class="title">L.E.U. // LIVE ARTIFACT</text>
+<text x="30" y="80" class="hud">PRIMITIVE: DO (Layer L2)</text>
+<text x="30" y="105" class="hud">FORMAL: do(a, x)</text>
+
+<!-- Glyphe Central -->
+<g transform="translate(300.0, 130.0) scale(2)">
+    
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><polygon points="0 0, 10 3, 0 6" fill="#d62728"/></marker></defs>
+<rect width="100" height="100" fill="#fafafa"/>
+<circle cx="50" cy="50" r="25" fill="#17becf"/>
+
+</g>
+
+<!-- HUD de Preuves -->
+<text x="30" y="300" class="hud">TIME (UTC): <tspan id="clock">--:--:--</tspan></text>
+<text x="30" y="330" class="hash">REAL SHA-256: 43635663fdd4fb2293f52ad54a5b7792591872644a57928f140117116c91636d</text>
+<text x="30" y="350" class="hash">GPG KEY: 4ED4A15BB5998C6239DE340336D4AEC00ADD1AEE</text>
+<text x="30" y="370" class="hash">DOI: 10.5281/zenodo.23476518</text>
+<text x="30" y="390" class="hud">STATUS: ANCHORED ON BITCOIN</text>
+
+<!-- Bouton Son -->
+<g class="btn" onclick="playSound()">
+    <rect x="30" y="480" width="200" height="50" fill="#17becf" rx="5"/>
+    <text x="130" y="512" font-family="'Courier New', monospace" fill="#0a0a0a" font-size="16" text-anchor="middle" font-weight="bold">▶ PLAY SOUND</text>
+</g>
+
+<!-- Lien Zenodo -->
+<g class="btn" onclick="window.open('https://doi.org/10.5281/zenodo.23476518', '_blank')">
+    <rect x="250" y="480" width="200" height="50" fill="none" stroke="#17becf" stroke-width="2" rx="5"/>
+    <text x="350" y="512" font-family="'Courier New', monospace" fill="#17becf" font-size="14" text-anchor="middle">VERIFY PROOF</text>
+</g>
+
+<script type="application/ecmascript"><![CDATA[
+    // Horloge temps réel
+    function updateClock() {
+        const now = new Date();
+        const timeString = now.toISOString().split('T')[1].split('.')[0];
+        const clockEl = document.getElementById('clock');
+        if (clockEl) clockEl.textContent = timeString;
+    }
+    setInterval(updateClock, 1000);
+    updateClock();
+
+    // Synthèse Audio (Web Audio API)
+    let audioCtx = null;
+    function playSound() {
+        if (!audioCtx) audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+        if (audioCtx.state === 'suspended') audioCtx.resume();
+        
+        const osc = audioCtx.createOscillator();
+        const gain = audioCtx.createGain();
+        osc.type = "sine";
+        osc.frequency.setValueAtTime(349, audioCtx.currentTime);
+        
+        // Si c'est MOVE ou CAUSE, on fait un glissando
+        if (349 !== 349) {
+            osc.frequency.exponentialRampToValueAtTime(349, audioCtx.currentTime + 0.5);
+        }
+        
+        gain.gain.setValueAtTime(0, audioCtx.currentTime);
+        gain.gain.linearRampToValueAtTime(0.3, audioCtx.currentTime + 0.05);
+        gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 0.8);
+        
+        osc.connect(gain);
+        gain.connect(audioCtx.destination);
+        osc.start();
+        osc.stop(audioCtx.currentTime + 0.8);
+    }
+]]></script>
+</svg>
