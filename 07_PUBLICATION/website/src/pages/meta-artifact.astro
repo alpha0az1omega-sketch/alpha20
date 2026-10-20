@@ -9,7 +9,7 @@ import Layout from '../layouts/Layout.astro';
       gap: 20px;
       height: 80vh;
       overflow: hidden;
-      background: #050505;
+      background: #1a1a2e; /* Bleu nuit clair au lieu du noir */
       border-radius: 12px;
       border: 1px solid #222;
       margin-top: 2rem;
@@ -30,6 +30,7 @@ import Layout from '../layouts/Layout.astro';
       align-items: center;
       justify-content: center;
       position: relative;
+      background: #1a1a2e;
     }
     .artifact-frame {
       width: 100%;
@@ -44,7 +45,7 @@ import Layout from '../layouts/Layout.astro';
       align-items: center;
       justify-content: center;
       padding: 20px;
-      background: #0a0a0a;
+      background: #1a1a2e;
       border-left: 1px solid #222;
     }
     .qr-col img {
@@ -117,7 +118,7 @@ import Layout from '../layouts/Layout.astro';
     for (let x = 0; x < columns; x++) drops[x] = 1;
 
     function drawMatrix() {
-      ctx.fillStyle = 'rgba(5, 5, 5, 0.05)';
+      ctx.fillStyle = 'rgba(26, 26, 46, 0.05)'; /* Adapter au fond bleu nuit */
       ctx.fillRect(0, 0, canvas.width, canvas.height);
       ctx.fillStyle = '#17becf';
       ctx.font = fontSize + 'px monospace';
