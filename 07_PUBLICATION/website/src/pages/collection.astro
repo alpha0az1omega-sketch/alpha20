@@ -14,7 +14,7 @@ const primitives = [
     {primitives.map((p) => (
       <div style="border: 1px solid #eaeaea; border-radius: 8px; overflow: hidden; background: #fff; text-align: center; padding: 1rem;">
         <h3 style="margin: 0 0 10px 0; font-size: 1.2rem; color: #1a1a2e;">{p}</h3>
-        <a href={`/live_${p}.svg`} target="_blank" style="display: inline-block; padding: 8px 16px; background: #17becf; color: #fff; text-decoration: none; border-radius: 4px; font-size: 0.9rem;">▶ Open Live Artifact</a>
+        <a href={`/${p === 'EXIST' ? 'live_EXIST.svg' : 'live_' + p + '.svg'}`} target="_blank" style="display: inline-block; padding: 8px 16px; background: #17becf; color: #fff; text-decoration: none; border-radius: 4px; font-size: 0.9rem;">▶ Open Live Artifact</a>
       </div>
     ))}
   </div>
