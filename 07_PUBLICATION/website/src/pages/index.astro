@@ -5,11 +5,20 @@ import Layout from '../layouts/Layout.astro';
   <div class="hero">
     <h1>A Universal, Executable, Sonorous, and Cryptographic Language.</h1>
     <p>Built on 20 semantic primitives across 5 ontological layers (L0-L4). It compiles to Python and WebAssembly, renders deterministic SVG glyphs, synthesizes audio via the Web Audio API, and seals every state change with SHA-256 and OpenTimestamps.</p>
-    <div class="buttons">
+    
+    <!-- Le badge du DOI -->
+    <p style="margin-top: 1.5rem; font-weight: bold; color: #17becf; font-size: 1.1rem;">
+      Officially Certified by Zenodo: <br/>
+      <a href="https://doi.org/10.5281/zenodo.23476518" target="_blank" style="color: #17becf; text-decoration: underline;">DOI 10.5281/zenodo.23476518</a>
+    </p>
+
+    <div class="buttons" style="margin-top: 2rem; display: flex; gap: 1rem; flex-wrap: wrap;">
+      <a href="/collection" class="btn" style="background: #2ca02c; color: white; padding: 0.8rem 1.5rem; border-radius: 6px; text-decoration: none; font-weight: bold;">Explore the 20 Live Artifacts</a>
       <a href="/demo" class="btn">Explore the Agentic Glyph</a>
-      <a href="/whitepaper.html" class="btn" style="background: transparent; color: var(--text); border: 1px solid var(--text);">Read the Whitepaper</a>
+      <a href="/whitepaper.html" class="btn" style="background: transparent; color: var(--text); border: 1px solid var(--text); padding: 0.8rem 1.5rem; border-radius: 6px; text-decoration: none; font-weight: bold;">Read the Whitepaper</a>
     </div>
   </div>
+  
   <h2>Architecture</h2>
   <ul>
     <li><strong>L0 (Formal Logic):</strong> EXIST, SAME, ONE, ALL, NOT, IF, TRUE</li>
