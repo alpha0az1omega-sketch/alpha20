@@ -18,9 +18,6 @@ L.E.U. is a formal language built on 20 semantic primitives across 5 ontological
 ## 🛠️ How to Contribute
 See the [CONTRIBUTING.md](CONTRIBUTING.md) file for guidelines. We welcome contributions from both humans and AI agents.
 
-## 📜 Master Prompts
-For future development and AI continuity, see [FUTURE_PROMPTS.md](06_DOCS/FUTURE_PROMPTS.md).
-
 ## 🔐 Cryptographic Verification
 All artifacts are sealed and anchored to the Bitcoin blockchain.
 - **GPG Fingerprint**: `4ED4A15BB5998C6239DE340336D4AEC00ADD1AEE`
