@@ -1,0 +1,183 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="1000" viewBox="0 0 800 1000">
+<rect width="100%" height="100%" fill="#fafafa"/>
+<rect x="0.0" y="0.0" width="200.0" height="200.0" fill="none" stroke="#ddd"/>
+<g transform="translate(50.0, 40.0)">
+
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><polygon points="0 0, 10 3, 0 6" fill="#d62728"/></marker></defs>
+<rect width="100" height="100" fill="#fafafa"/>
+<rect x="25" y="25" width="50" height="50" fill="#e377c2"/>
+
+</g>
+<text x="100.0" y="160.0" font-family="monospace" font-size="20" fill="#1a1a2e" text-anchor="middle">ALL</text>
+<rect x="200.0" y="0.0" width="200.0" height="200.0" fill="none" stroke="#ddd"/>
+<g transform="translate(250.0, 40.0)">
+
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><polygon points="0 0, 10 3, 0 6" fill="#d62728"/></marker></defs>
+<rect width="100" height="100" fill="#fafafa"/>
+<circle cx="50" cy="50" r="40" fill="#d62728"/>
+
+</g>
+<text x="300.0" y="160.0" font-family="monospace" font-size="20" fill="#1a1a2e" text-anchor="middle">BIG</text>
+<rect x="400.0" y="0.0" width="200.0" height="200.0" fill="none" stroke="#ddd"/>
+<g transform="translate(450.0, 40.0)">
+
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><polygon points="0 0, 10 3, 0 6" fill="#d62728"/></marker></defs>
+<rect width="100" height="100" fill="#fafafa"/>
+<line x1="20" y1="50" x2="80" y2="50" stroke="#d62728" stroke-width="6" marker-end="url(#arrow)"/>
+
+</g>
+<text x="500.0" y="160.0" font-family="monospace" font-size="20" fill="#1a1a2e" text-anchor="middle">CAUSE</text>
+<rect x="600.0" y="0.0" width="200.0" height="200.0" fill="none" stroke="#ddd"/>
+<g transform="translate(650.0, 40.0)">
+
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><polygon points="0 0, 10 3, 0 6" fill="#d62728"/></marker></defs>
+<rect width="100" height="100" fill="#fafafa"/>
+<path d="M50,20 C80,30 80,70 50,80 L55,85" fill="none" stroke="#7f7f7f" stroke-width="4"/>
+
+</g>
+<text x="700.0" y="160.0" font-family="monospace" font-size="20" fill="#1a1a2e" text-anchor="middle">DIE</text>
+<rect x="0.0" y="200.0" width="200.0" height="200.0" fill="none" stroke="#ddd"/>
+<g transform="translate(50.0, 240.0)">
+
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><polygon points="0 0, 10 3, 0 6" fill="#d62728"/></marker></defs>
+<rect width="100" height="100" fill="#fafafa"/>
+<circle cx="50" cy="50" r="25" fill="#17becf"/>
+
+</g>
+<text x="100.0" y="360.0" font-family="monospace" font-size="20" fill="#1a1a2e" text-anchor="middle">DO</text>
+<rect x="200.0" y="200.0" width="200.0" height="200.0" fill="none" stroke="#ddd"/>
+<g transform="translate(250.0, 240.0)">
+
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><polygon points="0 0, 10 3, 0 6" fill="#d62728"/></marker></defs>
+<rect width="100" height="100" fill="#fafafa"/>
+<circle cx="50" cy="50" r="30" fill="#1f77b4"/>
+
+</g>
+<text x="300.0" y="360.0" font-family="monospace" font-size="20" fill="#1a1a2e" text-anchor="middle">EXIST</text>
+<rect x="400.0" y="200.0" width="200.0" height="200.0" fill="none" stroke="#ddd"/>
+<g transform="translate(450.0, 240.0)">
+
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><polygon points="0 0, 10 3, 0 6" fill="#d62728"/></marker></defs>
+<rect width="100" height="100" fill="#fafafa"/>
+<circle cx="50" cy="50" r="30" fill="none" stroke="#2ca02c" stroke-width="4"/><line x1="35" y1="50" x2="65" y2="50" stroke="#2ca02c" stroke-width="4"/><line x1="50" y1="35" x2="50" y2="65" stroke="#2ca02c" stroke-width="4"/>
+
+</g>
+<text x="500.0" y="360.0" font-family="monospace" font-size="20" fill="#1a1a2e" text-anchor="middle">GOOD</text>
+<rect x="600.0" y="200.0" width="200.0" height="200.0" fill="none" stroke="#ddd"/>
+<g transform="translate(650.0, 240.0)">
+
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><polygon points="0 0, 10 3, 0 6" fill="#d62728"/></marker></defs>
+<rect width="100" height="100" fill="#fafafa"/>
+<path d="M20,50 Q35,30 50,50 T80,50" fill="none" stroke="#ff7f0e" stroke-width="4"/>
+
+</g>
+<text x="700.0" y="360.0" font-family="monospace" font-size="20" fill="#1a1a2e" text-anchor="middle">HAPPEN</text>
+<rect x="0.0" y="400.0" width="200.0" height="200.0" fill="none" stroke="#ddd"/>
+<g transform="translate(50.0, 440.0)">
+
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><polygon points="0 0, 10 3, 0 6" fill="#d62728"/></marker></defs>
+<rect width="100" height="100" fill="#fafafa"/>
+<polygon points="50,20 80,50 50,80 20,50" fill="none" stroke="#bcbd22" stroke-width="4"/>
+
+</g>
+<text x="100.0" y="560.0" font-family="monospace" font-size="20" fill="#1a1a2e" text-anchor="middle">IF</text>
+<rect x="200.0" y="400.0" width="200.0" height="200.0" fill="none" stroke="#ddd"/>
+<g transform="translate(250.0, 440.0)">
+
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><polygon points="0 0, 10 3, 0 6" fill="#d62728"/></marker></defs>
+<rect width="100" height="100" fill="#fafafa"/>
+<ellipse cx="50" cy="50" rx="35" ry="20" fill="none" stroke="#1f77b4" stroke-width="4"/><circle cx="50" cy="50" r="8" fill="#1f77b4"/>
+
+</g>
+<text x="300.0" y="560.0" font-family="monospace" font-size="20" fill="#1a1a2e" text-anchor="middle">KNOW</text>
+<rect x="400.0" y="400.0" width="200.0" height="200.0" fill="none" stroke="#ddd"/>
+<g transform="translate(450.0, 440.0)">
+
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><polygon points="0 0, 10 3, 0 6" fill="#d62728"/></marker></defs>
+<rect width="100" height="100" fill="#fafafa"/>
+<path d="M50,20 C80,30 80,70 50,80" fill="none" stroke="#2ca02c" stroke-width="4"/>
+
+</g>
+<text x="500.0" y="560.0" font-family="monospace" font-size="20" fill="#1a1a2e" text-anchor="middle">LIVE</text>
+<rect x="600.0" y="400.0" width="200.0" height="200.0" fill="none" stroke="#ddd"/>
+<g transform="translate(650.0, 440.0)">
+
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><polygon points="0 0, 10 3, 0 6" fill="#d62728"/></marker></defs>
+<rect width="100" height="100" fill="#fafafa"/>
+<path d="M20,50 Q50,20 80,50" fill="none" stroke="#17becf" stroke-width="6" marker-end="url(#arrow)"/>
+
+</g>
+<text x="700.0" y="560.0" font-family="monospace" font-size="20" fill="#1a1a2e" text-anchor="middle">MOVE</text>
+<rect x="0.0" y="600.0" width="200.0" height="200.0" fill="none" stroke="#ddd"/>
+<g transform="translate(50.0, 640.0)">
+
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><polygon points="0 0, 10 3, 0 6" fill="#d62728"/></marker></defs>
+<rect width="100" height="100" fill="#fafafa"/>
+<circle cx="50" cy="50" r="30" fill="none" stroke="#7f7f7f" stroke-width="4"/><line x1="28" y1="72" x2="72" y2="28" stroke="#7f7f7f" stroke-width="4"/>
+
+</g>
+<text x="100.0" y="760.0" font-family="monospace" font-size="20" fill="#1a1a2e" text-anchor="middle">NOT</text>
+<rect x="200.0" y="600.0" width="200.0" height="200.0" fill="none" stroke="#ddd"/>
+<g transform="translate(250.0, 640.0)">
+
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><polygon points="0 0, 10 3, 0 6" fill="#d62728"/></marker></defs>
+<rect width="100" height="100" fill="#fafafa"/>
+<circle cx="50" cy="50" r="10" fill="#8c564b"/>
+
+</g>
+<text x="300.0" y="760.0" font-family="monospace" font-size="20" fill="#1a1a2e" text-anchor="middle">ONE</text>
+<rect x="400.0" y="600.0" width="200.0" height="200.0" fill="none" stroke="#ddd"/>
+<g transform="translate(450.0, 640.0)">
+
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><polygon points="0 0, 10 3, 0 6" fill="#d62728"/></marker></defs>
+<rect width="100" height="100" fill="#fafafa"/>
+<circle cx="50" cy="50" r="30" fill="none" stroke="#2ca02c" stroke-width="4"/><circle cx="50" cy="50" r="12" fill="#2ca02c"/>
+
+</g>
+<text x="500.0" y="760.0" font-family="monospace" font-size="20" fill="#1a1a2e" text-anchor="middle">PART</text>
+<rect x="600.0" y="600.0" width="200.0" height="200.0" fill="none" stroke="#ddd"/>
+<g transform="translate(650.0, 640.0)">
+
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><polygon points="0 0, 10 3, 0 6" fill="#d62728"/></marker></defs>
+<rect width="100" height="100" fill="#fafafa"/>
+<rect x="20" y="35" width="25" height="30" fill="#9467bd"/><rect x="55" y="35" width="25" height="30" fill="#9467bd"/>
+
+</g>
+<text x="700.0" y="760.0" font-family="monospace" font-size="20" fill="#1a1a2e" text-anchor="middle">SAME</text>
+<rect x="0.0" y="800.0" width="200.0" height="200.0" fill="none" stroke="#ddd"/>
+<g transform="translate(50.0, 840.0)">
+
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><polygon points="0 0, 10 3, 0 6" fill="#d62728"/></marker></defs>
+<rect width="100" height="100" fill="#fafafa"/>
+<rect x="20" y="35" width="60" height="30" fill="none" stroke="#ff7f0e" stroke-width="4"/><polygon points="40,65 50,80 60,65" fill="#ff7f0e"/>
+
+</g>
+<text x="100.0" y="960.0" font-family="monospace" font-size="20" fill="#1a1a2e" text-anchor="middle">SAY</text>
+<rect x="200.0" y="800.0" width="200.0" height="200.0" fill="none" stroke="#ddd"/>
+<g transform="translate(250.0, 840.0)">
+
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><polygon points="0 0, 10 3, 0 6" fill="#d62728"/></marker></defs>
+<rect width="100" height="100" fill="#fafafa"/>
+<polygon points="50,20 80,70 20,70" fill="none" stroke="#2ca02c" stroke-width="4"/><circle cx="50" cy="55" r="8" fill="#2ca02c"/>
+
+</g>
+<text x="300.0" y="960.0" font-family="monospace" font-size="20" fill="#1a1a2e" text-anchor="middle">SEE</text>
+<rect x="400.0" y="800.0" width="200.0" height="200.0" fill="none" stroke="#ddd"/>
+<g transform="translate(450.0, 840.0)">
+
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><polygon points="0 0, 10 3, 0 6" fill="#d62728"/></marker></defs>
+<rect width="100" height="100" fill="#fafafa"/>
+<circle cx="35" cy="50" r="15" fill="none" stroke="#9467bd" stroke-width="4"/><circle cx="65" cy="50" r="15" fill="none" stroke="#9467bd" stroke-width="4"/><line x1="45" y1="50" x2="55" y2="50" stroke="#9467bd" stroke-width="4"/>
+
+</g>
+<text x="500.0" y="960.0" font-family="monospace" font-size="20" fill="#1a1a2e" text-anchor="middle">THINK</text>
+<rect x="600.0" y="800.0" width="200.0" height="200.0" fill="none" stroke="#ddd"/>
+<g transform="translate(650.0, 840.0)">
+
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><polygon points="0 0, 10 3, 0 6" fill="#d62728"/></marker></defs>
+<rect width="100" height="100" fill="#fafafa"/>
+<circle cx="50" cy="50" r="30" fill="none" stroke="#1f77b4" stroke-width="4"/><circle cx="50" cy="50" r="18" fill="none" stroke="#1f77b4" stroke-width="4"/>
+
+</g>
+<text x="700.0" y="960.0" font-family="monospace" font-size="20" fill="#1a1a2e" text-anchor="middle">TRUE</text>
+</svg>

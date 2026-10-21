@@ -1,0 +1,146 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="800" viewBox="0 0 800 800">
+<rect width="100%" height="100%" fill="#1a1a2e"/>
+<g>
+<animateTransform attributeName="transform" type="rotate" from="0 400.0 400.0" to="360 400.0 400.0" dur="20s" repeatCount="indefinite"/>
+<g transform="translate(650.0, 350.0)">
+
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><polygon points="0 0, 10 3, 0 6" fill="#d62728"/></marker></defs>
+<rect width="100" height="100" fill="#fafafa"/>
+<rect x="25" y="25" width="50" height="50" fill="#e377c2"/>
+
+</g>
+<g transform="translate(635.316954888546, 442.7050983124842)">
+
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><polygon points="0 0, 10 3, 0 6" fill="#d62728"/></marker></defs>
+<rect width="100" height="100" fill="#fafafa"/>
+<circle cx="50" cy="50" r="40" fill="#d62728"/>
+
+</g>
+<g transform="translate(592.7050983124842, 526.335575687742)">
+
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><polygon points="0 0, 10 3, 0 6" fill="#d62728"/></marker></defs>
+<rect width="100" height="100" fill="#fafafa"/>
+<line x1="20" y1="50" x2="80" y2="50" stroke="#d62728" stroke-width="6" marker-end="url(#arrow)"/>
+
+</g>
+<g transform="translate(526.335575687742, 592.7050983124842)">
+
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><polygon points="0 0, 10 3, 0 6" fill="#d62728"/></marker></defs>
+<rect width="100" height="100" fill="#fafafa"/>
+<path d="M50,20 C80,30 80,70 50,80 L55,85" fill="none" stroke="#7f7f7f" stroke-width="4"/>
+
+</g>
+<g transform="translate(442.7050983124842, 635.316954888546)">
+
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><polygon points="0 0, 10 3, 0 6" fill="#d62728"/></marker></defs>
+<rect width="100" height="100" fill="#fafafa"/>
+<circle cx="50" cy="50" r="25" fill="#17becf"/>
+
+</g>
+<g transform="translate(350.0, 650.0)">
+
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><polygon points="0 0, 10 3, 0 6" fill="#d62728"/></marker></defs>
+<rect width="100" height="100" fill="#fafafa"/>
+<circle cx="50" cy="50" r="30" fill="#1f77b4"/>
+
+</g>
+<g transform="translate(257.2949016875158, 635.3169548885461)">
+
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><polygon points="0 0, 10 3, 0 6" fill="#d62728"/></marker></defs>
+<rect width="100" height="100" fill="#fafafa"/>
+<circle cx="50" cy="50" r="30" fill="none" stroke="#2ca02c" stroke-width="4"/><line x1="35" y1="50" x2="65" y2="50" stroke="#2ca02c" stroke-width="4"/><line x1="50" y1="35" x2="50" y2="65" stroke="#2ca02c" stroke-width="4"/>
+
+</g>
+<g transform="translate(173.6644243122581, 592.7050983124842)">
+
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><polygon points="0 0, 10 3, 0 6" fill="#d62728"/></marker></defs>
+<rect width="100" height="100" fill="#fafafa"/>
+<path d="M20,50 Q35,30 50,50 T80,50" fill="none" stroke="#ff7f0e" stroke-width="4"/>
+
+</g>
+<g transform="translate(107.29490168751579, 526.335575687742)">
+
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><polygon points="0 0, 10 3, 0 6" fill="#d62728"/></marker></defs>
+<rect width="100" height="100" fill="#fafafa"/>
+<polygon points="50,20 80,50 50,80 20,50" fill="none" stroke="#bcbd22" stroke-width="4"/>
+
+</g>
+<g transform="translate(64.68304511145396, 442.70509831248427)">
+
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><polygon points="0 0, 10 3, 0 6" fill="#d62728"/></marker></defs>
+<rect width="100" height="100" fill="#fafafa"/>
+<ellipse cx="50" cy="50" rx="35" ry="20" fill="none" stroke="#1f77b4" stroke-width="4"/><circle cx="50" cy="50" r="8" fill="#1f77b4"/>
+
+</g>
+<g transform="translate(50.0, 350.00000000000006)">
+
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><polygon points="0 0, 10 3, 0 6" fill="#d62728"/></marker></defs>
+<rect width="100" height="100" fill="#fafafa"/>
+<path d="M50,20 C80,30 80,70 50,80" fill="none" stroke="#2ca02c" stroke-width="4"/>
+
+</g>
+<g transform="translate(64.68304511145385, 257.2949016875159)">
+
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><polygon points="0 0, 10 3, 0 6" fill="#d62728"/></marker></defs>
+<rect width="100" height="100" fill="#fafafa"/>
+<path d="M20,50 Q50,20 80,50" fill="none" stroke="#17becf" stroke-width="6" marker-end="url(#arrow)"/>
+
+</g>
+<g transform="translate(107.29490168751576, 173.6644243122581)">
+
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><polygon points="0 0, 10 3, 0 6" fill="#d62728"/></marker></defs>
+<rect width="100" height="100" fill="#fafafa"/>
+<circle cx="50" cy="50" r="30" fill="none" stroke="#7f7f7f" stroke-width="4"/><line x1="28" y1="72" x2="72" y2="28" stroke="#7f7f7f" stroke-width="4"/>
+
+</g>
+<g transform="translate(173.66442431225803, 107.29490168751579)">
+
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><polygon points="0 0, 10 3, 0 6" fill="#d62728"/></marker></defs>
+<rect width="100" height="100" fill="#fafafa"/>
+<circle cx="50" cy="50" r="10" fill="#8c564b"/>
+
+</g>
+<g transform="translate(257.29490168751573, 64.68304511145396)">
+
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><polygon points="0 0, 10 3, 0 6" fill="#d62728"/></marker></defs>
+<rect width="100" height="100" fill="#fafafa"/>
+<circle cx="50" cy="50" r="30" fill="none" stroke="#2ca02c" stroke-width="4"/><circle cx="50" cy="50" r="12" fill="#2ca02c"/>
+
+</g>
+<g transform="translate(349.99999999999994, 50.0)">
+
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><polygon points="0 0, 10 3, 0 6" fill="#d62728"/></marker></defs>
+<rect width="100" height="100" fill="#fafafa"/>
+<rect x="20" y="35" width="25" height="30" fill="#9467bd"/><rect x="55" y="35" width="25" height="30" fill="#9467bd"/>
+
+</g>
+<g transform="translate(442.70509831248415, 64.68304511145391)">
+
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><polygon points="0 0, 10 3, 0 6" fill="#d62728"/></marker></defs>
+<rect width="100" height="100" fill="#fafafa"/>
+<rect x="20" y="35" width="60" height="30" fill="none" stroke="#ff7f0e" stroke-width="4"/><polygon points="40,65 50,80 60,65" fill="#ff7f0e"/>
+
+</g>
+<g transform="translate(526.3355756877419, 107.29490168751573)">
+
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><polygon points="0 0, 10 3, 0 6" fill="#d62728"/></marker></defs>
+<rect width="100" height="100" fill="#fafafa"/>
+<polygon points="50,20 80,70 20,70" fill="none" stroke="#2ca02c" stroke-width="4"/><circle cx="50" cy="55" r="8" fill="#2ca02c"/>
+
+</g>
+<g transform="translate(592.7050983124842, 173.66442431225803)">
+
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><polygon points="0 0, 10 3, 0 6" fill="#d62728"/></marker></defs>
+<rect width="100" height="100" fill="#fafafa"/>
+<circle cx="35" cy="50" r="15" fill="none" stroke="#9467bd" stroke-width="4"/><circle cx="65" cy="50" r="15" fill="none" stroke="#9467bd" stroke-width="4"/><line x1="45" y1="50" x2="55" y2="50" stroke="#9467bd" stroke-width="4"/>
+
+</g>
+<g transform="translate(635.316954888546, 257.29490168751573)">
+
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><polygon points="0 0, 10 3, 0 6" fill="#d62728"/></marker></defs>
+<rect width="100" height="100" fill="#fafafa"/>
+<circle cx="50" cy="50" r="30" fill="none" stroke="#1f77b4" stroke-width="4"/><circle cx="50" cy="50" r="18" fill="none" stroke="#1f77b4" stroke-width="4"/>
+
+</g>
+</g>
+</svg>
