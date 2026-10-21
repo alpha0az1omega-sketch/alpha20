@@ -23,6 +23,16 @@ All artifacts are sealed and anchored to the Bitcoin blockchain.
 - **GPG Fingerprint**: `4ED4A15BB5998C6239DE340336D4AEC00ADD1AEE`
 - **DOI**: `10.5281/zenodo.23476518`
 
+## 🧠 The Epistemic Seal (Rupture Épistémologique)
+
+Traditional AI models can hallucinate. They generate text that looks true but is factually incorrect. How can we trust them?
+
+L.E.U. introduces the **Epistemic Seal**. Every artifact (SVG, NFT, or AI response) can be cryptographically sealed. 
+- **Visual Artifacts** display their own SHA-256, GPG fingerprint, and DOI directly on the image.
+- **AI Responses** can be sealed via the "🔒 Seal" button in the Playground, generating a SHA-256 hash of the exact text and timestamping it.
+
+This is a paradigm shift: we move from "trusting the AI" to "verifying the AI's output mathematically." The proof is not in the words; the proof is in the hash.
+
 ## ⚖️ License
 PolyForm Noncommercial 1.0.0.
 For commercial use, contact: alpha0az1omega@proton.me
