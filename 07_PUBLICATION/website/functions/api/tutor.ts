@@ -1,47 +1,33 @@
-interface Env {
-  AI: any;
-}
+interface Env { AI: any; }
 
 export const onRequestPost: PagesFunction<Env> = async (context) => {
   const { request, env } = context;
-  const { message, history } = await request.json() as { message: string, history: any[] };
+  const { message } = await request.json() as { message: string };
 
-  if (!message) {
-    return new Response(JSON.stringify({ error: "Message required" }), { status: 400 });
+  // 1. Le Contexte Strict (Grounding) : On injecte les faits de L.E.U.
+  const context = `
+  You are the L.E.U. Tutor. You ONLY answer based on the following facts.
+  FACTS:
+  - Creator: Alpha0az1omega (collaboration with DeepSeek).
+  - L.E.U. stands for Lingua Executabilis Universalis.
+  - It is based on 20 primitives (L0-L4).
+  - DOI: 10.5281/zenodo.23476518.
+  - Website: alpha0az1omega.com.
+  - If the user asks a question NOT covered by these facts, you MUST respond with: "I don't have this information in my knowledge base."
+  `;
+
+  try {
+    const response = await env.AI.run("@cf/meta/llama-3.1-8b-instruct-fast", {
+      messages: [
+        { role: "system", content: context },
+        { role: "user", content: message }
+      ]
+    });
+
+    return new Response(JSON.stringify({ reply: response.response }), {
+      headers: { "Content-Type": "application/json" }
+    });
+  } catch (error) {
+    return new Response(JSON.stringify({ error: "AI service unavailable" }), { status: 500 });
   }
-
-  // Prompt strict pour éviter les hallucinations
-  const systemPrompt = `You are the L.E.U. Tutor (Lingua Executabilis Universalis). 
-You are an AI assistant created by the collaboration between Alpha0az1omega and DeepSeek. 
-Do NOT invent facts about L.E.U. The creator is Alpha0az1omega, not anyone else.
-L.E.U. is a language based on 20 primitives (L0-L4). Answer concisely based strictly on this context.`;
-
-  const models = [
-    "@cf/meta/llama-3.1-8b-instruct-fast",
-    "@cf/meta/llama-3.1-8b-instruct"
-  ];
-
-  let lastError = "";
-
-  for (const model of models) {
-    try {
-      const response = await env.AI.run(model, {
-        messages: [
-          { role: "system", content: systemPrompt },
-          ...(history || []),
-          { role: "user", content: message }
-        ]
-      });
-      
-      return new Response(JSON.stringify({ reply: response.response, model_used: model }), {
-        headers: { "Content-Type": "application/json" }
-      });
-      
-    } catch (error) {
-      lastError = String(error);
-      console.warn(`Le modèle ${model} a échoué, essai du suivant...`);
-    }
-  }
-
-  return new Response(JSON.stringify({ error: "Tous les modèles IA sont indisponibles.", details: lastError }), { status: 500 });
 };
