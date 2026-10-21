@@ -14,7 +14,6 @@ export default function TutorSidebar() {
     setInput('');
     setLoading(true);
 
-    // Format history for the AI API context
     const history = messages.map(m => ({
       role: m.role === 'user' ? 'user' : 'assistant',
       content: m.text
@@ -41,6 +40,19 @@ export default function TutorSidebar() {
     return match ? match[0] : null;
   };
 
+  const sealMessage = async (text: string) => {
+    try {
+      const msgBuffer = new TextEncoder().encode(text);
+      const hashBuffer = await crypto.subtle.digest('SHA-256', msgBuffer);
+      const hashArray = Array.from(new Uint8Array(hashBuffer));
+      const hashHex = hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
+      
+      alert(`🔒 Epistemic Seal Generated!\n\nSHA-256: ${hashHex}\n\nDate: ${new Date().toISOString()}\n\nThis response is now cryptographically verifiable.`);
+    } catch (error) {
+      alert("Error generating seal. Ensure you are on a secure (HTTPS) connection.");
+    }
+  };
+
   return (
     <div className="tutor-sidebar">
       <h3 style={{ margin: '0 0 10px 0', fontSize: '14px', color: '#17becf' }}>L.E.U. Tutor</h3>
@@ -51,16 +63,25 @@ export default function TutorSidebar() {
             <span style={{ display: 'inline-block', padding: '6px 10px', borderRadius: '8px', fontSize: '13px', background: m.role === 'user' ? '#17becf' : '#f0f0f0', color: m.role === 'user' ? '#fff' : '#333' }}>
               {m.text}
             </span>
-            {m.role === 'ai' && extractExpression(m.text) && (
-              <div style={{ marginTop: '5px' }}>
+            
+            {m.role === 'ai' && (
+              <div style={{ marginTop: '5px', display: 'flex', gap: '5px', flexWrap: 'wrap' }}>
+                {extractExpression(m.text) && (
+                  <button 
+                    onClick={() => {
+                      const expr = extractExpression(m.text);
+                      if (expr) window.dispatchEvent(new CustomEvent('alpha20-evaluate', { detail: expr }));
+                    }}
+                    style={{ fontSize: '11px', padding: '4px 8px', cursor: 'pointer', background: '#2ca02c', color: '#fff', border: 'none', borderRadius: '4px' }}
+                  >
+                    ▶ Draw on canvas
+                  </button>
+                )}
                 <button 
-                  onClick={() => {
-                    const expr = extractExpression(m.text);
-                    if (expr) window.dispatchEvent(new CustomEvent('alpha20-evaluate', { detail: expr }));
-                  }}
-                  style={{ fontSize: '11px', padding: '4px 8px', cursor: 'pointer', background: '#2ca02c', color: '#fff', border: 'none', borderRadius: '4px' }}
+                  onClick={() => sealMessage(m.text)}
+                  style={{ fontSize: '11px', padding: '4px 8px', cursor: 'pointer', background: '#1a1a2e', color: '#fff', border: 'none', borderRadius: '4px' }}
                 >
-                  ▶ Draw on canvas
+                  🔒 Seal
                 </button>
               </div>
             )}
