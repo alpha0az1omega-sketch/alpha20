@@ -1,81 +1,44 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
-<rect width="100%" height="100%" fill="#0a0a0a"/>
-<style>
-    .hud { font-family: 'Courier New', monospace; fill: #17becf; font-size: 14px; }
-    .title { font-family: 'Courier New', monospace; fill: #ffffff; font-size: 28px; font-weight: bold; }
-    .hash { font-family: 'Courier New', monospace; fill: #888; font-size: 10px; }
-    .btn { cursor: pointer; }
-    .btn:hover { opacity: 0.8; }
-</style>
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="700" viewBox="0 0 600 700">
+<rect width="100%" height="100%" fill="#ffffff"/>
+<circle cx="300" cy="250" r="120" fill="none" stroke="#c7c7c7" stroke-width="6"/>
+<text x="300" y="280" font-family="monospace" font-size="80" fill="#c7c7c7" text-anchor="middle" font-weight="bold">S</text>
 
-<!-- En-tête -->
-<text x="30" y="50" class="title">L.E.U. // LIVE ARTIFACT</text>
-<text x="30" y="80" class="hud">PRIMITIVE: SAY (Layer L3)</text>
-<text x="30" y="105" class="hud">FORMAL: say(a, m)</text>
+<text x="300" y="420" font-family="monospace" font-size="24" fill="#111" text-anchor="middle" font-weight="bold">PRIMITIVE: SAY (Layer L3)</text>
+<text x="300" y="450" font-family="monospace" font-size="16" fill="#555" text-anchor="middle">FORMAL: say(a, m)</text>
 
-<!-- Glyphe Central -->
-<g transform="translate(300.0, 130.0) scale(2)">
-    
-<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><polygon points="0 0, 10 3, 0 6" fill="#d62728"/></marker></defs>
-<rect width="100" height="100" fill="#fafafa"/>
-<rect x="20" y="35" width="60" height="30" fill="none" stroke="#ff7f0e" stroke-width="4"/><polygon points="40,65 50,80 60,65" fill="#ff7f0e"/>
+<text x="300" y="500" font-family="monospace" font-size="12" fill="#333" text-anchor="middle">REAL SHA-256: 26bdbc074ff412415c0326583da7d070...</text>
+<text x="300" y="520" font-family="monospace" font-size="12" fill="#333" text-anchor="middle">GPG KEY: 4ED4A15BB5998C6239DE340336D4AEC00ADD1AEE</text>
+<text x="300" y="540" font-family="monospace" font-size="12" fill="#333" text-anchor="middle">DOI: 10.5281/zenodo.23476518</text>
 
-</g>
+<text x="300" y="580" font-family="monospace" font-size="14" fill="#c7c7c7" text-anchor="middle">TIME (UTC): <tspan id="clock">--:--:--</tspan></text>
+<text x="300" y="600" font-family="monospace" font-size="12" fill="#666" text-anchor="middle">STATUS: ANCHORED ON BITCOIN</text>
 
-<!-- HUD de Preuves -->
-<text x="30" y="300" class="hud">TIME (UTC): <tspan id="clock">--:--:--</tspan></text>
-<text x="30" y="330" class="hash">REAL SHA-256: 26bdbc074ff412415c0326583da7d070a6d0e32604e653c9cbe90db36d4648fe</text>
-<text x="30" y="350" class="hash">GPG KEY: 4ED4A15BB5998C6239DE340336D4AEC00ADD1AEE</text>
-<text x="30" y="370" class="hash">DOI: 10.5281/zenodo.23476518</text>
-<text x="30" y="390" class="hud">STATUS: ANCHORED ON BITCOIN</text>
-
-<!-- Bouton Son -->
-<g class="btn" onclick="playSound()">
-    <rect x="30" y="480" width="200" height="50" fill="#17becf" rx="5"/>
-    <text x="130" y="512" font-family="'Courier New', monospace" fill="#0a0a0a" font-size="16" text-anchor="middle" font-weight="bold">▶ PLAY SOUND</text>
-</g>
-
-<!-- Lien Zenodo -->
-<g class="btn" onclick="window.open('https://doi.org/10.5281/zenodo.23476518', '_blank')">
-    <rect x="250" y="480" width="200" height="50" fill="none" stroke="#17becf" stroke-width="2" rx="5"/>
-    <text x="350" y="512" font-family="'Courier New', monospace" fill="#17becf" font-size="14" text-anchor="middle">VERIFY PROOF</text>
+<g transform="translate(250, 630)" style="cursor:pointer;" onclick="playSound(392)">
+    <rect width="100" height="30" fill="#c7c7c7" rx="5"/>
+    <text x="50" y="20" font-family="monospace" font-size="12" fill="#fff" text-anchor="middle">▶ PLAY SOUND</text>
 </g>
 
 <script type="application/ecmascript"><![CDATA[
-    // Horloge temps réel
     function updateClock() {
-        const now = new Date();
-        const timeString = now.toISOString().split('T')[1].split('.')[0];
-        const clockEl = document.getElementById('clock');
-        if (clockEl) clockEl.textContent = timeString;
+        var now = new Date();
+        var timeStr = now.toISOString().split('T')[1].split('.')[0] + ' UTC';
+        var clockEl = document.getElementById('clock');
+        if (clockEl) clockEl.textContent = timeStr;
     }
     setInterval(updateClock, 1000);
     updateClock();
 
-    // Synthèse Audio (Web Audio API)
-    let audioCtx = null;
-    function playSound() {
-        if (!audioCtx) audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-        if (audioCtx.state === 'suspended') audioCtx.resume();
-        
-        const osc = audioCtx.createOscillator();
-        const gain = audioCtx.createGain();
+    function playSound(freq) {
+        var ctx = new (window.AudioContext || window.webkitAudioContext)();
+        var osc = ctx.createOscillator();
+        var gain = ctx.createGain();
         osc.type = "sine";
-        osc.frequency.setValueAtTime(392, audioCtx.currentTime);
-        
-        // Si c'est MOVE ou CAUSE, on fait un glissando
-        if (392 !== 392) {
-            osc.frequency.exponentialRampToValueAtTime(392, audioCtx.currentTime + 0.5);
-        }
-        
-        gain.gain.setValueAtTime(0, audioCtx.currentTime);
-        gain.gain.linearRampToValueAtTime(0.3, audioCtx.currentTime + 0.05);
-        gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 0.8);
-        
+        osc.frequency.setValueAtTime(freq, ctx.currentTime);
+        gain.gain.setValueAtTime(0.2, ctx.currentTime);
         osc.connect(gain);
-        gain.connect(audioCtx.destination);
+        gain.connect(ctx.destination);
         osc.start();
-        osc.stop(audioCtx.currentTime + 0.8);
+        osc.stop(ctx.currentTime + 0.5);
     }
 ]]></script>
 </svg>
