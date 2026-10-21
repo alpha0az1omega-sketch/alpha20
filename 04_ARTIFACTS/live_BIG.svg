@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="700" viewBox="0 0 600 700">
+<rect width="100%" height="100%" fill="#ffffff"/>
+<circle cx="300" cy="250" r="120" fill="none" stroke="#98df8a" stroke-width="6"/>
+<text x="300" y="280" font-family="monospace" font-size="80" fill="#98df8a" text-anchor="middle" font-weight="bold">B</text>
+
+<text x="300" y="420" font-family="monospace" font-size="24" fill="#111" text-anchor="middle" font-weight="bold">PRIMITIVE: BIG (Layer L1)</text>
+<text x="300" y="450" font-family="monospace" font-size="16" fill="#555" text-anchor="middle">FORMAL: size(x) > size(y)</text>
+
+<text x="300" y="500" font-family="monospace" font-size="12" fill="#333" text-anchor="middle">REAL SHA-256: a3b5be9b821885a4cf42f37e093ae0ef...</text>
+<text x="300" y="520" font-family="monospace" font-size="12" fill="#333" text-anchor="middle">GPG KEY: 4ED4A15BB5998C6239DE340336D4AEC00ADD1AEE</text>
+<text x="300" y="540" font-family="monospace" font-size="12" fill="#333" text-anchor="middle">DOI: 10.5281/zenodo.23476518</text>
+
+<text x="300" y="580" font-family="monospace" font-size="14" fill="#98df8a" text-anchor="middle">TIME (UTC): <tspan id="clock">--:--:--</tspan></text>
+<text x="300" y="600" font-family="monospace" font-size="12" fill="#666" text-anchor="middle">STATUS: ANCHORED ON BITCOIN</text>
+
+<g transform="translate(250, 630)" style="cursor:pointer;" onclick="playSound(110)">
+    <rect width="100" height="30" fill="#98df8a" rx="5"/>
+    <text x="50" y="20" font-family="monospace" font-size="12" fill="#fff" text-anchor="middle">▶ PLAY SOUND</text>
+</g>
+
+<script type="application/ecmascript"><![CDATA[
+    function updateClock() {
+        var now = new Date();
+        var timeStr = now.toISOString().split('T')[1].split('.')[0] + ' UTC';
+        var clockEl = document.getElementById('clock');
+        if (clockEl) clockEl.textContent = timeStr;
+    }
+    setInterval(updateClock, 1000);
+    updateClock();
+
+    function playSound(freq) {
+        var ctx = new (window.AudioContext || window.webkitAudioContext)();
+        var osc = ctx.createOscillator();
+        var gain = ctx.createGain();
+        osc.type = "sine";
+        osc.frequency.setValueAtTime(freq, ctx.currentTime);
+        gain.gain.setValueAtTime(0.2, ctx.currentTime);
+        osc.connect(gain);
+        gain.connect(ctx.destination);
+        osc.start();
+        osc.stop(ctx.currentTime + 0.5);
+    }
+]]></script>
+</svg>
