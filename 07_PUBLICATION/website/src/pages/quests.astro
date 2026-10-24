@@ -1,0 +1,109 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const quests = [
+  { id: 'q1', title: 'Awakening of OBSERVE', level: 'Legendary', xp: 1000, desc: 'Add the 21st primitive (OBSERVE) to the lexicon, SVG, and sonification.', tag: 'Contribution' },
+  { id: 'q2', title: 'The Living PNG', level: 'Mythic', xp: 2000, desc: 'Create a PNG file that contains its own executable JavaScript code.', tag: 'Disruption' },
+  { id: 'q3', title: 'The Infinite Universe', level: 'Epic', xp: 1500, desc: 'Build a Three.js scene where 20 primitives rotate in infinite space.', tag: 'Visual' },
+  { id: 'q4', title: 'The TELA Protocol', level: 'Rare', xp: 800, desc: 'Write a script that verifies an L.E.U. expression signed by an AI agent.', tag: 'AI' },
+  { id: 'q5', title: 'First Molecule Contribution', level: 'Common', xp: 100, desc: 'Submit a new molecule with its 3D geometry and SHA-256.', tag: 'Contribution' },
+  { id: 'q6', title: 'Translation to a New Language', level: 'Rare', xp: 500, desc: 'Translate the whitepaper to Spanish, Chinese, or Arabic.', tag: 'Accessibility' },
+  { id: 'q7', title: 'Fix a Bug in the Compiler', level: 'Common', xp: 200, desc: 'Find and fix a bug in alpha20_compiler.py.', tag: 'Code' },
+  { id: 'q8', title: 'Create an Anatomy Model', level: 'Epic', xp: 1200, desc: 'Submit a new anatomically detailed model (bones + muscles + vessels).', tag: 'Science' },
+];
+
+const levels = [
+  { name: 'Observer', xp: 0, color: '#7f7f7f' },
+  { name: 'Explorer', xp: 100, color: '#17becf' },
+  { name: 'Contributor', xp: 500, color: '#2ca02c' },
+  { name: 'Architect', xp: 2000, color: '#d4af37' },
+  { name: 'Oracle', xp: 10000, color: '#9467bd' },
+];
+---
+<Layout title="Quests">
+  <h1>The L.E.U. Quest Board</h1>
+  <p>Earn XP by contributing to the universe. Every quest is verifiable. Every reward is cryptographic.</p>
+
+  <div style="background: #fafafa; padding: 2rem; border-radius: 12px; margin: 2rem 0; border-left: 4px solid #d4af37;">
+    <h2 style="margin-top: 0;">Your Progress</h2>
+    <p>XP: <strong id="total-xp" style="font-size: 2rem; color: #d4af37;">0</strong> / 10000</p>
+    <p>Level: <strong id="current-level" style="color: #17becf;">Observer</strong></p>
+    <div style="background: #e0e0e0; height: 20px; border-radius: 10px; overflow: hidden;">
+      <div id="xp-bar" style="background: linear-gradient(90deg, #17becf, #d4af37); height: 100%; width: 0%; transition: width 0.5s;"></div>
+    </div>
+  </div>
+
+  <h2>Available Quests</h2>
+  <div style="display: grid; gap: 1rem;">
+    {quests.map((q) => (
+      <div style="border: 1px solid #ddd; border-radius: 8px; padding: 1rem; background: #fff;" data-quest={q.id} data-xp={q.xp}>
+        <div style="display: flex; justify-content: space-between; align-items: start; flex-wrap: wrap; gap: 1rem;">
+          <div style="flex: 1; min-width: 250px;">
+            <span style="font-size: 0.75rem; background: #17becf; color: #fff; padding: 2px 8px; border-radius: 4px;">{q.tag}</span>
+            <span style="font-size: 0.75rem; background: #d4af37; color: #000; padding: 2px 8px; border-radius: 4px; margin-left: 4px;">{q.level}</span>
+            <h3 style="margin: 0.5rem 0; color: #1a1a2e;">{q.title}</h3>
+            <p style="margin: 0; color: #666; font-size: 0.9rem;">{q.desc}</p>
+          </div>
+          <div style="text-align: right;">
+            <div style="font-size: 1.5rem; font-weight: bold; color: #d4af37;">+{q.xp} XP</div>
+            <button class="complete-btn" style="margin-top: 0.5rem; padding: 8px 16px; background: #2ca02c; color: #fff; border: none; border-radius: 4px; cursor: pointer;">Mark as Started</button>
+          </div>
+        </div>
+      </div>
+    ))}
+  </div>
+
+  <h2 style="margin-top: 3rem;">Levels</h2>
+  <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 1rem;">
+    {levels.map((l) => (
+      <div style={`padding: 1rem; border: 2px solid ${l.color}; border-radius: 8px; text-align: center;`}>
+        <div style={`font-size: 1.5rem; color: ${l.color}; font-weight: bold;`}>{l.name}</div>
+        <div style="color: #666; font-size: 0.85rem;">{l.xp}+ XP</div>
+      </div>
+    ))}
+  </div>
+
+  <script>
+    const quests = document.querySelectorAll('[data-quest]');
+    const totalXpEl = document.getElementById('total-xp');
+    const levelEl = document.getElementById('current-level');
+    const barEl = document.getElementById('xp-bar');
+    const levels = [
+      { name: 'Observer', xp: 0 }, { name: 'Explorer', xp: 100 },
+      { name: 'Contributor', xp: 500 }, { name: 'Architect', xp: 2000 },
+      { name: 'Oracle', xp: 10000 }
+    ];
+    function getCompleted() {
+      try { return JSON.parse(localStorage.getItem('leu-quests') || '[]'); } catch { return []; }
+    }
+    function saveCompleted(ids) {
+      localStorage.setItem('leu-quests', JSON.stringify(ids));
+    }
+    function updateUI() {
+      const completed = getCompleted();
+      let totalXp = 0;
+      quests.forEach(q => {
+        const id = q.dataset.quest;
+        const xp = parseInt(q.dataset.xp);
+        const btn = q.querySelector('.complete-btn');
+        if (completed.includes(id)) {
+          totalXp += xp;
+          if (btn) { btn.textContent = '✓ Completed'; btn.style.background = '#d4af37'; btn.disabled = true; }
+        }
+      });
+      if (totalXpEl) totalXpEl.textContent = totalXp;
+      const lvl = [...levels].reverse().find(l => totalXp >= l.xp) || levels[0];
+      if (levelEl) levelEl.textContent = lvl.name;
+      if (barEl) barEl.style.width = Math.min(totalXp / 10000 * 100, 100) + '%';
+    }
+    quests.forEach(q => {
+      const btn = q.querySelector('.complete-btn');
+      btn?.addEventListener('click', () => {
+        const id = q.dataset.quest;
+        const completed = getCompleted();
+        if (!completed.includes(id)) { completed.push(id); saveCompleted(completed); updateUI(); }
+      });
+    });
+    updateUI();
+  </script>
+</Layout>
