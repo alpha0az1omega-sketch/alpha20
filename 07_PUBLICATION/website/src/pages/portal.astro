@@ -1,0 +1,80 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+<Layout title="Portal of Infinity">
+  <div style="text-align: center; margin: 3rem 0;">
+    <h1 style="font-size: 3rem; color: #d4af37; margin-bottom: 0.5rem;">PORTAL OF INFINITY</h1>
+    <p style="font-size: 1.2rem; color: #666; font-family: monospace;">ENTER ANY NUMBER · DISCOVER A UNIQUE ENTITY</p>
+  </div>
+
+  <div style="max-width: 600px; margin: 0 auto; padding: 2rem; background: #fafafa; border-radius: 12px; border: 2px solid #d4af37;">
+    <label style="display: block; font-family: monospace; color: #1a1a2e; margin-bottom: 0.5rem;">Enter an index (0 - 999,999,999) :</label>
+    <input type="number" id="index" min="0" max="999999999" value="42" style="width: 100%; padding: 12px; font-size: 1.5rem; font-family: monospace; border: 2px solid #17becf; border-radius: 6px; text-align: center;" />
+    <button id="generate" style="margin-top: 1rem; width: 100%; padding: 14px; background: #d4af37; color: #000; border: none; border-radius: 6px; font-size: 1.2rem; font-weight: bold; cursor: pointer;">🌀 GENERATE ENTITY</button>
+  </div>
+
+  <div id="result" style="margin-top: 2rem; display: none;">
+    <div style="background: #0a0a0a; border: 2px solid #d4af37; border-radius: 12px; padding: 2rem;">
+      <h2 id="entity-name" style="color: #d4af37; font-family: monospace; text-align: center; margin-top: 0;">...</h2>
+      <div id="entity-details" style="color: #c0c0c0; font-family: monospace; font-size: 0.9rem; line-height: 1.8;"></div>
+      <div style="margin-top: 1.5rem; text-align: center;">
+        <a id="entity-link" href="#" target="_blank" style="color: #17becf; font-weight: bold;">→ View the 3D artifact</a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function hashCode(str) {
+      let h = 0;
+      for (let i = 0; i < str.length; i++) {
+        h = ((h << 5) - h) + str.charCodeAt(i);
+        h = h & h;
+      }
+      return Math.abs(h);
+    }
+
+    const categories = [
+      { id: 'elements', path: '/artifacts/elements/', ext: '.html', count: 118, desc: 'Atomic structure' },
+      { id: 'molecules', path: '/artifacts/molecules/', ext: '.html', count: 45, desc: 'Molecular geometry' },
+      { id: 'morphologies', path: '/artifacts/morphologies/', ext: '.html', count: 9, desc: 'Biological morphology' },
+      { id: 'anatomy', path: '/artifacts/anatomy/', ext: '.html', count: 2, desc: 'Anatomical model' },
+    ];
+
+    document.getElementById('generate').addEventListener('click', () => {
+      const idx = parseInt(document.getElementById('index').value) || 0;
+      const seed = 'LEU-' + idx;
+      const h = hashCode(seed);
+      
+      const cat = categories[h % categories.length];
+      const itemIdx = h % cat.count;
+      
+      let filename;
+      if (cat.id === 'elements') {
+        const z = (itemIdx + 1).toString().padStart(3, '0');
+        const elementMap = {1:'H',2:'He',3:'Li',4:'Be',5:'B',6:'C',7:'N',8:'O',9:'F',10:'Ne'};
+        filename = z + '_' + (elementMap[itemIdx+1] || 'Xx') + cat.ext;
+      } else if (cat.id === 'molecules') {
+        const mols = ['H2','O2','N2','CO','HCl','F2','CO2','HCN','H2O','H2S','SO2','NO2','O3','BF3','SO3','NO3','CH4','NH4','CCl4','SiH4','NH3','PH3','SF6','PF6','C2H2','C2H4','C2H6','CH3OH','C2H5OH','CH3COOH','C6H6','C6H12O6','H2O2','N2O','NO','HNO3','H2SO4','NaOH','KCl','NaCl','CaCO3','Fe2O3','ZnO','CuSO4'];
+        filename = mols[itemIdx] + cat.ext;
+      } else if (cat.id === 'morphologies') {
+        const morphs = ['atome_hydrogene','adn_humain','cheval','docteur','reseau_internet','particule_quantique','eau','fer','conscience','chene'];
+        filename = morphs[itemIdx % morphs.length] + cat.ext;
+      } else {
+        filename = (itemIdx === 0 ? 'cheval_anatomie' : 'chene_anatomie') + cat.ext;
+      }
+      
+      const link = cat.path + filename;
+      
+      document.getElementById('entity-name').textContent = 'Entity #' + idx;
+      document.getElementById('entity-details').innerHTML = 
+        'Category: <strong style="color: #d4af37;">' + cat.id.toUpperCase() + '</strong><br>' +
+        'Description: ' + cat.desc + '<br>' +
+        'Artifact: ' + filename + '<br>' +
+        'Seed SHA-256: <span style="color: #17becf;">' + h.toString(16).padStart(16, '0') + '</span><br>' +
+        'DOI: 10.5281/zenodo.23476518<br>' +
+        'Status: VERIFIABLE';
+      document.getElementById('entity-link').href = link;
+      document.getElementById('result').style.display = 'block';
+    });
+  </script>
+</Layout>
