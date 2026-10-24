@@ -1,0 +1,49 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const categories = [
+  { id: 'primitives', title: 'The 20 Primitives', count: '20', icon: '◈', desc: 'L0-L4 · Formal Logic to Life', link: '/collection', color: '#17becf' },
+  { id: 'elements', title: 'Elements', count: '118', icon: '⚛', desc: 'The Periodic Table in 3D', link: '/artifacts/elements/001_H.html', color: '#ff6b6b' },
+  { id: 'molecules', title: 'Molecules', count: '45', icon: '🔗', desc: 'H₂O, CO₂, ADN, Glucose...', link: '/artifacts/molecules/H2O.html', color: '#feca57' },
+  { id: 'morphologies', title: 'Morphologies', count: '9', icon: '◉', desc: 'Atom, ADN, Animal, Human, Network...', link: '/artifacts/morphologies/cheval.html', color: '#48dbfb' },
+  { id: 'anatomy', title: 'Anatomy', count: '2', icon: '🦴', desc: 'Horse, Oak · Bones, Muscles, Vessels', link: '/artifacts/anatomy/cheval_anatomie.html', color: '#8c564b' },
+  { id: 'universe', title: 'The Universe', count: '∞', icon: '🌌', desc: 'Matrix Silver/Gold + 20 Spheres', link: '/artifacts/universe/universe.html', color: '#d4af37' },
+  { id: 'meta', title: 'Meta-Artifact', count: '1', icon: '◆', desc: 'Matrix + 3D + QR + Live Artifacts', link: '/meta-artifact', color: '#9467bd' },
+  { id: 'playground', title: 'Playground', count: '∞', icon: '▶', desc: 'Draw, Compile, Play, Seal', link: '/playground-v2', color: '#2ca02c' },
+];
+---
+<Layout title="Hub">
+  <div style="text-align: center; margin-bottom: 3rem;">
+    <h1 style="font-size: 3rem; color: #1a1a2e; margin-bottom: 0.5rem;">L.E.U. UNIVERSE</h1>
+    <p style="font-size: 1.2rem; color: #666; font-family: monospace;">LINGUA EXECUTABILIS UNIVERSALIS</p>
+    <p style="margin-top: 1rem;">
+      <a href="https://doi.org/10.5281/zenodo.23476518" target="_blank" style="color: #17becf; font-weight: bold;">DOI 10.5281/zenodo.23476518</a>
+    </p>
+  </div>
+
+  <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.5rem;">
+    {categories.map((c) => (
+      <a href={c.link} target="_blank" style={`display: block; padding: 1.5rem; border: 2px solid ${c.color}; border-radius: 12px; text-decoration: none; background: #fff; transition: transform 0.2s;`}>
+        <div style="font-size: 2.5rem; color: ${c.color};">{c.icon}</div>
+        <h3 style="margin: 0.5rem 0; color: #1a1a2e; font-size: 1.3rem;">{c.title}</h3>
+        <div style={`font-size: 2rem; font-weight: bold; color: ${c.color};`}>{c.count}</div>
+        <p style="color: #666; font-size: 0.9rem; margin: 0.5rem 0;">{c.desc}</p>
+        <div style="color: #17becf; font-size: 0.85rem; margin-top: 0.5rem;">Explore →</div>
+      </a>
+    ))}
+  </div>
+
+  <div style="margin-top: 4rem; padding: 2rem; background: #fafafa; border-radius: 12px; border-left: 4px solid #17becf;">
+    <h2 style="margin-top: 0; color: #1a1a2e;">The L.E.U. Promise</h2>
+    <p><strong>Every artifact is visible, measurable, verifiable, and interconnected.</strong></p>
+    <ul>
+      <li>Every element has its real atomic structure</li>
+      <li>Every molecule has its real geometry</li>
+      <li>Every artifact carries its SHA-256, GPG, DOI</li>
+      <li>Every artifact displays real-time measurements</li>
+    </ul>
+    <p style="margin-bottom: 0;">
+      <a href="/verify" style="color: #17becf; font-weight: bold;">Verify the cryptographic proofs →</a>
+    </p>
+  </div>
+</Layout>
