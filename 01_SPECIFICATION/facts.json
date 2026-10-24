@@ -1,0 +1,25 @@
+{
+  "language": "Lingua Executabilis Universalis (L.E.U.)",
+  "creator": "Alpha0az1omega (en collaboration avec DeepSeek)",
+  "doi": "10.5281/zenodo.23476518",
+  "website": "https://alpha0az1omega.com",
+  "primitives": {
+    "L0": ["EXIST", "SAME", "ONE", "ALL", "NOT", "IF", "TRUE"],
+    "L1": ["CAUSE", "PART", "BIG"],
+    "L2": ["DO", "HAPPEN", "MOVE"],
+    "L3": ["KNOW", "SEE", "THINK", "SAY"],
+    "L4": ["LIVE", "DIE", "GOOD"]
+  },
+  "definition": "L.E.U. est un langage formel basé sur 20 primitives sémantiques. Il compile vers Python et WebAssembly, génère des glyphes SVG déterministes, synthétise de l'audio, et scelle chaque état avec SHA-256 et OpenTimestamps.",
+  "capabilities": [
+    "Exécution de logique formelle",
+    "Génération d'artefacts visuels et sonores",
+    "Preuve cryptographique d'intégrité",
+    "Vérification d'actions par des agents IA (TELA)"
+  ],
+  "limitations": [
+    "Le Tuteur IA ne doit pas inventer de primitives.",
+    "Le Tuteur IA ne doit pas inventer de créateurs.",
+    "Le Tuteur IA ne doit pas inventer de fonctionnalités."
+  ]
+}
