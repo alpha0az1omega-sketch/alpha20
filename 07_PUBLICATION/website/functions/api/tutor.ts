@@ -1,25 +1,39 @@
-interface Env { AI: any; }
+interface Env {
+  AI: any;
+}
 
 export const onRequestPost: PagesFunction<Env> = async (context) => {
   const { request, env } = context;
   const { message } = await request.json() as { message: string };
 
-  // 1. Le Contexte Strict (Grounding) : On injecte les faits de L.E.U.
-  const context = `
-  You are the L.E.U. Tutor. You ONLY answer based on the following facts.
+  if (!message) {
+    return new Response(JSON.stringify({ error: "Message required" }), { status: 400 });
+  }
+
+  // LE GROUNDING : On donne les faits exacts et on interdit d'inventer
+  const facts = `
+  You are the L.E.U. Tutor. 
   FACTS:
-  - Creator: Alpha0az1omega (collaboration with DeepSeek).
-  - L.E.U. stands for Lingua Executabilis Universalis.
-  - It is based on 20 primitives (L0-L4).
-  - DOI: 10.5281/zenodo.23476518.
-  - Website: alpha0az1omega.com.
-  - If the user asks a question NOT covered by these facts, you MUST respond with: "I don't have this information in my knowledge base."
+  - L.E.U. means Lingua Executabilis Universalis.
+  - Creator: Alpha0az1omega (in collaboration with DeepSeek).
+  - 20 Primitives: 
+    L0: EXIST, SAME, ONE, ALL, NOT, IF, TRUE
+    L1: CAUSE, PART, BIG
+    L2: DO, HAPPEN, MOVE
+    L3: KNOW, SEE, THINK, SAY
+    L4: LIVE, DIE, GOOD
+  - Website: https://alpha0az1omega.com
+  - DOI: 10.5281/zenodo.23476518
+  RULES:
+  - If the user asks about L.E.U., answer ONLY based on these facts.
+  - If the user asks a question outside of this scope, say: "I am the L.E.U. Tutor. I can only answer questions about the Lingua Executabilis Universalis."
+  - NEVER invent new primitives, creators, or definitions.
   `;
 
   try {
     const response = await env.AI.run("@cf/meta/llama-3.1-8b-instruct-fast", {
       messages: [
-        { role: "system", content: context },
+        { role: "system", content: facts },
         { role: "user", content: message }
       ]
     });
