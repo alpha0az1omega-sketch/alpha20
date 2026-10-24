@@ -1,38 +1,49 @@
-# Lingua Executabilis Universalis (L.E.U.)
+<div align="center">
+
+# LINGUA EXECUTABILIS UNIVERSALIS
+
+**A Universal, Executable, Sonorous, and Cryptographic Language**
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23476518.svg)](https://doi.org/10.5281/zenodo.23476518)
-[![License: PolyForm Noncommercial](https://img.shields.io/badge/License-PolyForm%20Noncommercial-blue.svg)](https://polyformproject.org/licenses/noncommercial/1.0.0/)
+[![License: PolyForm NC](https://img.shields.io/badge/License-PolyForm%20Noncommercial-blue.svg)](https://polyformproject.org/licenses/noncommercial/1.0.0/)
+[![GPG](https://img.shields.io/badge/GPG-4ED4A15B-green.svg)](09_PUBLIC_KEYS/alpha0az1omega_pubkey.asc)
+[![Website](https://img.shields.io/badge/Website-alpha0az1omega.com-17becf.svg)](https://alpha0az1omega.com)
 
-A Universal, Executable, Sonorous, and Cryptographic Language.
+</div>
+
+---
+
+## 🎯 What is L.E.U.?
+
+L.E.U. is a **metagenerator**: a language that generates generators that generate the universe.
+
+| Level | What it generates |
+|-------|-------------------|
+| **L4** | The metagenerator itself (20 primitives) |
+| **L3** | The algorithm of an entity |
+| **L2** | The equation of an entity |
+| **L1** | The entity (atom, molecule, animal, concept) |
+| **L0** | The user exploring |
+
+---
+
+## 🌌 The Universe (Live Stats)
+
+| Category | Count | Explore |
+|----------|-------|---------|
+| 20 Primitives (L0-L4) | 20 | [Collection](https://alpha0az1omega.com/collection) |
+| Chemical Elements | 118 | [H](https://alpha0az1omega.com/artifacts/elements/001_H.html) · [Fe](https://alpha0az1omega.com/artifacts/elements/026_Fe.html) · [Au](https://alpha0az1omega.com/artifacts/elements/079_Au.html) |
+| Molecules | 45 | [H₂O](https://alpha0az1omega.com/artifacts/molecules/H2O.html) · [CH₄](https://alpha0az1omega.com/artifacts/molecules/CH4.html) · [C₆H₆](https://alpha0az1omega.com/artifacts/molecules/C6H6.html) |
+| Morphologies | 9 | [Horse](https://alpha0az1omega.com/artifacts/morphologies/cheval.html) |
+| Anatomy Models | 2 | [Horse](https://alpha0az1omega.com/artifacts/anatomy/cheval_anatomie.html) |
+| **∞ Portal of Infinity** | **∞** | [Generate](https://alpha0az1omega.com/portal) |
+
+---
 
 ## 🚀 Quick Start
-Explore the live project: **[alpha0az1omega.com](https://alpha0az1omega.com)**
 
-- **The Collection**: 20 Live Artifacts (SVG + Audio + SHA-256).
-- **The Playground**: Interact with an AI Tutor and compile expressions.
-- **The Meta-Artifact**: A visual fusion of Matrix, 3D, and cryptographic proof.
-
-## 🧠 What is L.E.U.?
-L.E.U. is a formal language built on 20 semantic primitives across 5 ontological layers (L0-L4). It compiles to Python and WebAssembly, renders deterministic SVG glyphs, synthesizes audio via the Web Audio API, and seals every state change with SHA-256 and OpenTimestamps.
-
-## 🛠️ How to Contribute
-See the [CONTRIBUTING.md](CONTRIBUTING.md) file for guidelines. We welcome contributions from both humans and AI agents.
-
-## 🔐 Cryptographic Verification
-All artifacts are sealed and anchored to the Bitcoin blockchain.
-- **GPG Fingerprint**: `4ED4A15BB5998C6239DE340336D4AEC00ADD1AEE`
-- **DOI**: `10.5281/zenodo.23476518`
-
-## 🧠 The Epistemic Seal (Rupture Épistémologique)
-
-Traditional AI models can hallucinate. They generate text that looks true but is factually incorrect. How can we trust them?
-
-L.E.U. introduces the **Epistemic Seal**. Every artifact (SVG, NFT, or AI response) can be cryptographically sealed. 
-- **Visual Artifacts** display their own SHA-256, GPG fingerprint, and DOI directly on the image.
-- **AI Responses** can be sealed via the "🔒 Seal" button in the Playground, generating a SHA-256 hash of the exact text and timestamping it.
-
-This is a paradigm shift: we move from "trusting the AI" to "verifying the AI's output mathematically." The proof is not in the words; the proof is in the hash.
-
-## ⚖️ License
-PolyForm Noncommercial 1.0.0.
-For commercial use, contact: alpha0az1omega@proton.me
+```bash
+git clone https://github.com/alpha0az1omega-sketch/lingua-executabilis-universalis
+cd lingua-executabilis-universalis
+python3 02_MVP/generate_elements_batch.py
+python3 02_MVP/generate_molecules_batch.py
